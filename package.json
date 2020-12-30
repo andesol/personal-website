@@ -1,0 +1,35 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "Built with Next.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andesol/personal-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andesol/personal-website/issues"
+  },
+  "homepage": "https://github.com/andesol/personal-website#readme",
+  "dependencies": {
+    "@theme-ui/presets": "^0.3.4",
+    "gray-matter": "^4.0.2",
+    "next": "^10.0.3",
+    "raw-loader": "^4.0.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-markdown": "^5.0.3",
+    "theme-ui": "^0.3.4"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}
