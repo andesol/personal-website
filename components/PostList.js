@@ -10,8 +10,6 @@ export default function PostList({ posts }) {
   return (
     <div
       sx={{
-        // border: "2px solid grey",
-        padding: "2rem",
         marginBottom: 5,
       }}
     >

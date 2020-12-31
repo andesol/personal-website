@@ -27,7 +27,7 @@ function Header({ title }) {
         </Link>
       </Heading>
       <Flex as="nav">
-        <NavLink href="/links">Links</NavLink>
+        <NavLink href="/library">Library</NavLink>
         <NavLink href="/blog">Blog</NavLink>
         <NavLink href="/contact" variant="cta">
           Contact

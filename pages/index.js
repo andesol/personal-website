@@ -45,17 +45,17 @@ export async function getStaticProps() {
       return {
         frontmatter: document.data,
         markdownBody: document.content,
-        slug
+        slug,
       };
     });
     return data;
-  })(require.context("../posts", true, /\.md$/));
+  })(require.context("../content/posts", true, /\.md$/));
 
   return {
     props: {
       posts,
       title: configData.default.title,
-      description: configData.default.description
-    }
+      description: configData.default.description,
+    },
   };
 }

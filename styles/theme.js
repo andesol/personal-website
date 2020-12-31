@@ -7,7 +7,7 @@ export default {
     text: "#000",
     background: "#fff",
     primary: "#FF6122",
-    secondary: "#E3C16F",
+    secondary: "#D8F793",
     accent: "#EDAE49",
     highlight: "00798C",
     muted: "#E6E6E6",
@@ -100,7 +100,7 @@ export default {
   layout: {
     mainContainer: {
       width: "90%",
-      maxWidth: "900px",
+      maxWidth: "800px",
     },
   },
   links: {
@@ -127,6 +127,9 @@ export default {
       borderStyle: "solid",
       borderColor: "primary",
       borderRadius: "10px",
+    },
+    normal: {
+      border: "2px solid blue",
     },
   },
 };

@@ -18,6 +18,7 @@ function Hero() {
           justifyContent: "center",
           alignItems: "flex-start",
           marginTop: 6,
+          padding: 4,
         }}
       >
         <Heading
