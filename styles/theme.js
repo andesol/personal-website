@@ -109,7 +109,7 @@ export default {
       justifyContent: "center",
       alignItems: "center",
       marginRight: 3,
-      padding: "2 2",
+      padding: "1rem 1rem",
       ":hover": {
         transform: "translateY(-1.5px)",
         boxShadow: t => `inset 0 -3px 0 0 ${t.colors.primary}`,

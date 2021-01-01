@@ -1,6 +1,6 @@
 import { ThemeProvider } from "theme-ui";
 import theme from "../styles/theme";
-import "../public/fonts/fonts.css";
+import "../styles/fonts.css";
 
 function App({ Component, pageProps }) {
   return (

@@ -1,6 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Box, Flex, Heading } from "theme-ui";
+import { jsx, Box, Heading } from "theme-ui";
 
 function Hero() {
   return (
