@@ -37,6 +37,8 @@ function Header() {
       stagger: 0.01,
     });
 
+    console.log(window.innerWidth);
+
     if (window.innerWidth >= 980) {
       toggleNav.seek(0.4);
       toggleNavItems.seek(0.4);

@@ -109,6 +109,8 @@ export default {
       justifyContent: "center",
       alignItems: "center",
       marginRight: 3,
+      position: "relative",
+      left: "0px",
       padding: "1rem 1rem",
       ":hover": {
         transform: "translateY(-1.5px)",

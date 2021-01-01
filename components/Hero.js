@@ -17,7 +17,7 @@ function Hero() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "flex-start",
-          marginTop: 6,
+          marginTop: "10vw",
           padding: 4,
         }}
       >
