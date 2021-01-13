@@ -15,10 +15,10 @@ function LibraryPage({ resources }) {
         recommending
       </p>
       <div>
-        {resources.map(resource => {
+        {resources.map((resource, index) => {
           return (
             <Resource
-              key=
+              key={`item-${index}`}
               title={resource.frontmatter.title}
               link={resource.frontmatter.url}
               tags={resource.frontmatter.tags}
