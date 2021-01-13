@@ -8,21 +8,13 @@ function Footer() {
   return (
     <footer
       sx={{
-        backgroundColor: "secondary",
-        padding: "3rem",
+        display: "grid",
+        placeItems: "center",
+        minHeight: "5rem",
+        backgroundColor: "muted",
       }}
     >
-      <Flex
-        sx={{
-          flexDirection: "column",
-          width: "90%",
-          maxWidth: "500px",
-          m: "0 auto",
-        }}
-      >
-        <Heading as="h3">Any comment?</Heading>
-        <Form />
-      </Flex>
+      2020 - andesol
     </footer>
   );
 }

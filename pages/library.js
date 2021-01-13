@@ -18,6 +18,7 @@ function LibraryPage({ resources }) {
         {resources.map(resource => {
           return (
             <Resource
+              key=
               title={resource.frontmatter.title}
               link={resource.frontmatter.url}
               tags={resource.frontmatter.tags}

@@ -14,16 +14,6 @@ export default function indexPage({ posts, title, ...props }) {
       <main>
         <Hero />
         <section>
-          {/* <Heading
-            as="h3"
-            sx={{
-              textAlign: "center",
-              width: "auto",
-              margin: "0 auto",
-              textTransform: "uppercase",
-              color: "grey"
-            }}
-          ></Heading> */}
           <PostList posts={posts} />
         </section>
       </main>
