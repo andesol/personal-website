@@ -18,7 +18,7 @@ function Hero() {
           justifyContent: "center",
           alignItems: "flex-start",
           marginTop: "6vw",
-          padding: 4,
+          padding: 0,
         }}
       >
         <Heading
@@ -42,10 +42,6 @@ function Hero() {
               color: "#FFF",
               transform: "rotate(-1.5deg)",
               marginRight: 3,
-
-              // color: "primary",
-              // textDecorationStyle: "dotted",
-              // textDecorationLine: "underline",
               "::before": {
                 position: "absolute",
                 display: "inline-block",

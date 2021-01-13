@@ -1,6 +1,5 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-
 import { jsx, Heading } from "theme-ui";
 import Link from "next/link";
 
@@ -24,7 +23,7 @@ function Post({ post }) {
           <a>{post.frontmatter.title}</a>
         </Link>
       </Heading>
-      <p>{post.markdownBody}</p>
+      <p>{post.frontmatter.summary}</p>
     </article>
   );
 }

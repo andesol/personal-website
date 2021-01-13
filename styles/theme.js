@@ -99,7 +99,7 @@ export default {
   layout: {
     mainContainer: {
       width: "90%",
-      maxWidth: "800px",
+      maxWidth: "700px",
     },
   },
   links: {

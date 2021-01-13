@@ -1,0 +1,38 @@
+#__next {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:focus {
+  border: 2px dotted orange;
+}
+
+button:focus {
+  border: 2px dotted orange;
+}
+
+/* Override prismjs margin */
+article pre[class*="language-"] {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+}

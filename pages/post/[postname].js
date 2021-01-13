@@ -1,20 +1,21 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx } from "theme-ui";
 import Link from "next/link";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
-
-import Layout from "../../components/Layout";
+import Layout from "@components/Layout";
 
 export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
-  if (!frontmatter) return <></>;
+  if (!frontmatter) return <React.Fragment></React.Fragment>;
 
   return (
     <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`}>
-      <Link href="/">
+      <Link href="/blog">
         <a>Back to post list</a>
       </Link>
-      <article>
+      <article sx={{ fontSize: 3 }}>
         <h1>{frontmatter.title}</h1>
-        <p>By {frontmatter.author}</p>
         <div>
           <ReactMarkdown source={markdownBody} />
         </div>

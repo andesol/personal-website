@@ -18,7 +18,6 @@ function GlobalStyles() {
           margin: 0,
           padding: 0,
         },
-
         li: {
           listStyle: "none",
         },
@@ -32,6 +31,10 @@ function GlobalStyles() {
         },
         "button:focus": {
           border: "2px dotted orange",
+        },
+        pre: {
+          width: "70%",
+          margin: "0 auto",
         },
       })}
     />

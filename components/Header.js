@@ -68,7 +68,7 @@ function Header() {
         gap: "1rem",
         justifyContent: "space-between",
         overflow: "hidden",
-        padding: "1.5rem 1rem calc(1.5rem + 9px) 2rem",
+        padding: "1.5rem 0rem calc(1.5rem + 9px) 0rem",
         position: "relative",
       }}
     >
