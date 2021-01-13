@@ -1,9 +1,12 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { useState, useEffect, useRef } from "react";
-import { jsx, Flex, NavLink, Heading, MenuButton } from "theme-ui";
-import Link from "next/link";
+import { jsx, Flex, NavLink, Heading, MenuButton, Styled } from "theme-ui";
+
 import IconGithub from "@components/IconGithub";
+import Logo from "@components/Logo";
+import RouteLink from "@components/RouteLink";
+
 import gsap from "gsap";
 
 let toggleNav;
@@ -14,9 +17,7 @@ function Header() {
   const ref = useRef();
 
   useEffect(() => {
-    const nav = ref.current.querySelector("nav");
-
-    console.log(nav);
+    const nav = ref.current;
 
     gsap.set(nav, { height: "auto" });
     gsap.set(nav.querySelectorAll("a"), { opacity: 1 });
@@ -70,7 +71,6 @@ function Header() {
         padding: "1.5rem 1rem calc(1.5rem + 9px) 2rem",
         position: "relative",
       }}
-      ref={ref}
     >
       <div
         sx={{
@@ -79,9 +79,11 @@ function Header() {
           width: ["100%", "100%", "auto"],
         }}
       >
-        <a href="/" rel="home">
-          andesol
-        </a>
+        <RouteLink href="/">
+          <a>
+            <Logo />
+          </a>
+        </RouteLink>
         <MenuButton
           sx={{
             display: ["block", "block", "none"],
@@ -94,12 +96,17 @@ function Header() {
         sx={{
           flexDirection: ["column", "column", "row"],
         }}
+        ref={ref}
       >
-        <NavLink href="/library">Resources</NavLink>
-        <NavLink href="/blog">Blog</NavLink>
-        <NavLink href="https://github.com/andesol">
+        <RouteLink variant="nav" href="/library">
+          Resources
+        </RouteLink>
+        <RouteLink variant="nav" href="/blog">
+          Blog
+        </RouteLink>
+        <RouteLink variant="nav" href="https://github.com/andesol">
           <IconGithub />
-        </NavLink>
+        </RouteLink>
       </Flex>
     </Flex>
   );

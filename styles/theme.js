@@ -17,7 +17,6 @@ export default {
       'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
     heading: "Merriweather, serif",
     monospace: "Menlo, monospace",
-    logo: "Andika New Basic, sans-serif",
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
   fontWeights: {
@@ -108,13 +107,21 @@ export default {
       display: "inline-flex",
       justifyContent: "center",
       alignItems: "center",
-      marginRight: 3,
+      marginRight: 1,
       position: "relative",
       left: "0px",
       padding: "1rem 1rem",
+      fontWeight: "bold",
       ":hover": {
         transform: "translateY(-1.5px)",
         boxShadow: t => `inset 0 -3px 0 0 ${t.colors.primary}`,
+        color: "primary",
+      },
+      ":active": {
+        color: "primary",
+      },
+      ":hover > svg": {
+        fill: "primary",
       },
     },
     noDecoration: {
