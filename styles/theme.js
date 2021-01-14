@@ -15,7 +15,7 @@ export default {
   fonts: {
     body:
       'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
-    heading: "Merriweather, serif",
+    heading: "Crimson Pro, serif",
     monospace: "Menlo, monospace",
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
@@ -91,9 +91,10 @@ export default {
       fontWeight: "heading",
       lineHeight: "heading",
     },
-    logo: {
-      textDecoration: "none",
-      fontSize: 4,
+    title: {
+      fontFamily: "heading",
+      fontWeight: "heading",
+      fontSize: 5,
     },
   },
   layout: {

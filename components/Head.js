@@ -15,7 +15,7 @@ function Seo({ pageTitle }) {
       <title>{pageTitle}</title>
       <link
         rel="preload"
-        href="/fonts/merriweather-regular.woff2"
+        href="/fonts/CrimsonPro-Bold.woff2"
         as="font"
         crossOrigin=""
       />

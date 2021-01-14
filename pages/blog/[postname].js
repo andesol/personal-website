@@ -1,5 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
+import React from "react";
 import { jsx } from "theme-ui";
 import Link from "next/link";
 import matter from "gray-matter";
@@ -45,12 +46,13 @@ export async function getStaticPaths() {
     const keys = context.keys();
     const data = keys.map((key, index) => {
       let slug = key.replace(/^.*[\\\/]/, "").slice(0, -3);
+
       return slug;
     });
     return data;
   })(require.context("../../content/posts", true, /\.md$/));
 
-  const paths = blogSlugs.map(slug => `/post/${slug}`);
+  const paths = blogSlugs.map(slug => `/blog/${slug}`);
 
   return {
     paths,

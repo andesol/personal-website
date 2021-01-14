@@ -15,11 +15,12 @@ function Post({ post }) {
     >
       <Heading
         as="h2"
+        variant="title"
         sx={{
           display: "inline-block",
         }}
       >
-        <Link href={`/post/${post.slug}`}>
+        <Link href={`/blog/${post.slug}`}>
           <a>{post.frontmatter.title}</a>
         </Link>
       </Heading>

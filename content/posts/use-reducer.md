@@ -1,4 +1,5 @@
 ---
+date: 2021-01-13
 title: "React hooks: useReducer"
 author: "andesol"
 summary: "One of the most useful React Hooks, with examples"
@@ -57,14 +58,14 @@ Here there's an application of `useReducer` to manage the local state. It's an a
 ```js
 import React, { useReducer } from "react";
 
-// dummy data array
+// Dummy data array
 const SHOWS = [
  { id: 1, name: "American Horror Story", likes: 0 },
  { id: 2, name: "Black Mirror", likes: 0 },
  { id: 3, name: "The Queen's Gambit", likes: 0 }
 ];
 
-// reducer function
+// Reducer function
 function showsReducer(state, action) {
 
     switch (action.type) {
@@ -88,7 +89,7 @@ function showsReducer(state, action) {
     }
 }
 
-// list of show component
+// List of shows component
 function Shows({ initialList }) {
     const [state, dispatch] = useReducer(showsReducer, initialList);
 
@@ -129,4 +130,4 @@ export default function App() {
 
 So the question might be: when to use `useState` and when `useReducer`?
 
-A rule of thumb would be to use `useState` for single pieces of state, and switch to `useReducer` when the state update depends on past changes or when the stat eis a structure with several sub-elements (`useReducer` is particularly useful to update objects or arrays in a controlled and testable manner).
+A rule of thumb would be to use `useState` for single pieces of state, and switch to `useReducer` when the state update depends on past changes or when the state is a structure with several sub-elements (`useReducer` is particularly useful to update objects or arrays in a controlled and testable manner).

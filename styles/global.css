@@ -1,3 +1,26 @@
+/* ===============
+    Font imports
+   =============== */
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("/fonts/merriweather-regular.woff2") format("woff2"),
+    url("/fonts/merriweather-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Crimson Pro";
+  src: url("/fonts/CrimsonPro-Bold.woff2") format("woff2"),
+    url("/fonts/CrimsonPro-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===============
+    Base styles
+   =============== */
+
 #__next {
   display: flex;
   flex-direction: column;
@@ -30,7 +53,7 @@ button:focus {
   border: 2px dotted orange;
 }
 
-/* Override prismjs margin */
+/* Override prismjs styles */
 article pre[class*="language-"] {
   width: 100%;
   margin: 0 auto;

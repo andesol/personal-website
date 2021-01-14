@@ -29,7 +29,8 @@ export async function getStaticProps() {
     const values = keys.map(context);
 
     const data = keys.map((key, index) => {
-      let slug = key.replace(/^.*[\\\/]/, "").slice(0, -3);
+      // turn "./example.md" into "example"
+      let slug = key.replace(/^.*[\\\/]\d*[.-_]/, "").slice(0, -3);
       const value = values[index];
       const document = matter(value.default);
       return {

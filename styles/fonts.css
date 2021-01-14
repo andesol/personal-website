@@ -1,6 +1,0 @@
-/* Font imports */
-@font-face {
-  font-family: "Merriweather";
-  src: url("/fonts/merriweather-regular.woff2") format("woff2"),
-    url("/fonts/merriweather-regular.woff") format("woff");
-}

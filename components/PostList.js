@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx, Link } from "theme-ui";
 import nextLink from "next/link";
-import Post from "@components/Post";
+import PostCard from "@components/PostCard";
 
 export default function PostList({ posts }) {
   if (posts === "undefined") return null;
@@ -16,7 +16,7 @@ export default function PostList({ posts }) {
       <div>
         {posts &&
           posts.map(post => {
-            return <Post key={post.slug} post={post} />;
+            return <PostCard key={post.slug} post={post} />;
           })}
       </div>
       <Link as={nextLink} variant="nav" href="/blog">

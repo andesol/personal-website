@@ -1,6 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Box, Heading } from "theme-ui";
+import { jsx, Box, Heading, Flex } from "theme-ui";
+import Sticker from "@components/Sticker";
 
 function Hero() {
   return (
@@ -34,32 +35,11 @@ function Hero() {
             fontSize: 3,
           }}
         >
-          <span
-            sx={{
-              display: "inline-block",
-              fontWeight: "bold",
-              position: "relative",
-              color: "#FFF",
-              transform: "rotate(-1.5deg)",
-              marginRight: 3,
-              "::before": {
-                position: "absolute",
-                display: "inline-block",
-                content: '""',
-                width: "108%",
-                height: "30px",
-                backgroundColor: "primary",
-                top: "2px",
-                left: "-6px",
-                zIndex: "-1",
-                boxShadow: "sticker",
-              },
-            }}
-          >
-            {""} Web developer {""}
-          </span>
-          aficionado, with a particular focus in the Javascript ecosystem. Here
-          I keep track of what I discover and share what I learn.
+          I collect here my public notes on
+          <Sticker sx={{ marginLeft: "10px" }} color="primary">
+            {" "}
+            web development
+          </Sticker>
         </p>
       </Box>
     </div>

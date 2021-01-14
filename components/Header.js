@@ -98,11 +98,8 @@ function Header() {
         }}
         ref={ref}
       >
-        <RouteLink variant="nav" href="/library">
-          Resources
-        </RouteLink>
         <RouteLink variant="nav" href="/blog">
-          Blog
+          Notes
         </RouteLink>
         <RouteLink variant="nav" href="https://github.com/andesol">
           <IconGithub />
