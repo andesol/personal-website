@@ -1,5 +1,5 @@
 ---
-date: 2021-01-13
+date: "2021-01-13"
 title: "React hooks: useReducer"
 author: "andesol"
 summary: "One of the most useful React Hooks, with examples"
