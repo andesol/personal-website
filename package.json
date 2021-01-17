@@ -32,6 +32,7 @@
     "theme-ui": "^0.3.4"
   },
   "devDependencies": {
+    "jimp": "^0.16.1",
     "prettier": "^2.2.1"
   }
 }
