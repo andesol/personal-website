@@ -1,39 +1,14 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from "theme-ui";
-
-import matter from "gray-matter";
-
-import RouterLink from "@components/RouteLink";
 import Layout from "@components/Layout";
 import PostList from "@components/PostList";
-import Hero from "@components/Hero";
+import matter from "gray-matter";
 
-export default function indexPage({ posts, title, ...props }) {
+export default function blogPage({ posts, title, ...props }) {
   return (
-    <Layout pageTitle={title} page="home">
+    <Layout pageTitle={title} page="blog">
       <main>
-        <Hero />
         <section>
           <PostList posts={posts} />
         </section>
-        <div
-          sx={{
-            display: "grid",
-            placeItems: "center",
-          }}
-        >
-          <RouterLink
-            variant="underlined"
-            href="/blog"
-            sx={{
-              display: "inline-block",
-              margin: "0 auto",
-            }}
-          >
-            Read more
-          </RouterLink>
-        </div>
       </main>
     </Layout>
   );

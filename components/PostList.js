@@ -19,9 +19,6 @@ export default function PostList({ posts }) {
             return <PostCard key={post.slug} post={post} />;
           })}
       </div>
-      <Link as={nextLink} variant="nav" href="/blog">
-        Read more
-      </Link>
     </div>
   );
 }

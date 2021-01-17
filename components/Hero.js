@@ -31,11 +31,11 @@ function Hero() {
         </Heading>
         <p
           sx={{
-            maxWidth: "55ch",
+            maxWidth: "35ch",
             fontSize: 3,
           }}
         >
-          I collect here my public notes on
+          I share here my public notes on
           <Sticker sx={{ marginLeft: "10px" }} color="primary">
             {" "}
             web development

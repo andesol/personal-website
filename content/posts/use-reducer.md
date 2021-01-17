@@ -5,9 +5,9 @@ author: "andesol"
 summary: "One of the most useful React Hooks, with examples"
 ---
 
-`useReducer` is similar to `useState` in the sense that both serve the purpose of introducing state into functional components.
+Both **`useReducer`** and **`useState`** are similar in the sense that they both serve the purpose of introducing state into functional components.
 
-If we forget for a moment about the common naming conventions, the syntax may be quite similar. Taking the classical counter app as an example:
+If we forget for a moment about common naming conventions, the syntax may look quite similar. Taking the classical counter app as an example:
 
 ```js
 // Counter with useEffect
@@ -47,13 +47,13 @@ export default function App() {
 }
 ```
 
-One noteworthy difference is that `useReducer` takes a so-called _reducer_ function before the initial value. This function takes the current state and an _action_ and returns a new single piece of state.
+One noteworthy difference is that `useReducer` takes a so-called _reducer_ function before the initial value. This function takes the current state and an _action_ and returns a new single piece of state, `(state, action) => newState`.
 
-The general rules for writing reducers says they shouldn't mutate the state, but make an immutable update, and there cannot contain side-effects (reducers are _pure functions_).
+The general rules for writing reducers say they shouldn't mutate state, but make an immutable update, and there cannot contain side-effects (reducers are _pure functions_).
 
-The common pattern is to combine `useReducer` and `useContext` to create a global state that can be accessed by any component that may require it (thus, avoiding _prop drilling_).
+A common pattern is to combine `useReducer` and `useContext` to create a global state that can be accessed by any component that may require it (thus, avoiding _prop drilling_).
 
-Here there's an application of `useReducer` to manage the local state. It's an app that let us like or dislike a list of TV shows.
+Here's an application of `useReducer` to manage the local state. `Shows` is a component with a list of TV shows we can like or dislike.
 
 ```js
 import React, { useReducer } from "react";

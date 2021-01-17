@@ -11,6 +11,7 @@ export default {
     accent: "#EDAE49",
     highlight: "00798C",
     muted: "#E6E6E6",
+    grey: "#",
   },
   fonts: {
     body:
@@ -125,21 +126,9 @@ export default {
         fill: "primary",
       },
     },
-    noDecoration: {
-      textDecoration: "none",
-      color: "inherit",
-    },
-    cta: {
-      marginRight: 3,
-      padding: "0.2rem 0.7rem",
-      color: "primary",
-      borderSize: "2px",
-      borderStyle: "solid",
-      borderColor: "primary",
-      borderRadius: "10px",
-    },
-    normal: {
-      border: "2px solid blue",
+    underlined: {
+      borderBottom: t => `4px solid ${t.colors.primary}`,
+      padding: 2,
     },
   },
 };

@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import React from "react";
 import { jsx } from "theme-ui";
-import Link from "next/link";
+import RouteLink from "@components/RouteLink";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import Layout from "@components/Layout";
@@ -11,16 +11,25 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
   if (!frontmatter) return <React.Fragment></React.Fragment>;
 
   return (
-    <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`}>
-      <Link href="/blog">
-        <a>Back to post list</a>
-      </Link>
+    <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`} page="article">
       <article sx={{ fontSize: 3 }}>
         <h1>{frontmatter.title}</h1>
         <div>
           <ReactMarkdown source={markdownBody} />
         </div>
       </article>
+      <div
+        sx={{
+          display: "grid",
+          placeItems: "center",
+          marginTop: 2,
+          marginBottom: 2,
+        }}
+      >
+        <RouteLink variant="underlined" href="/blog">
+          Back to index
+        </RouteLink>
+      </div>
     </Layout>
   );
 }

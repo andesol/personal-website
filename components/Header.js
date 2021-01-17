@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { useState, useEffect, useRef } from "react";
-import { jsx, Flex, NavLink, Heading, MenuButton, Styled } from "theme-ui";
+import { jsx, Flex, MenuButton, Link } from "theme-ui";
 
 import IconGithub from "@components/IconGithub";
 import Logo from "@components/Logo";
@@ -12,7 +12,8 @@ import gsap from "gsap";
 let toggleNav;
 let toggleNavItems;
 
-function Header() {
+function Header({ page }) {
+  console.log(page);
   const [open, setOpen] = useState(false);
   const ref = useRef();
 
@@ -38,15 +39,13 @@ function Header() {
       stagger: 0.01,
     });
 
-    console.log(window.innerWidth);
-
     if (window.innerWidth >= 980) {
       toggleNav.seek(0.4);
       toggleNavItems.seek(0.4);
     }
   }, [ref]);
 
-  function handleClick(event) {
+  function handleMenu(event) {
     event.preventDefault();
     if (open) {
       toggleNav.reverse();
@@ -56,6 +55,27 @@ function Header() {
       toggleNavItems.play();
     }
     setOpen(!open);
+  }
+
+  let pageDependentNavItem;
+  if (page === "home") {
+    pageDependentNavItem = (
+      <RouteLink variant="nav" href="/blog">
+        Notes
+      </RouteLink>
+    );
+  } else if (page === "blog") {
+    pageDependentNavItem = (
+      <RouteLink variant="nav" href="/">
+        Home
+      </RouteLink>
+    );
+  } else if (page === "article") {
+    pageDependentNavItem = (
+      <RouteLink variant="nav" href="/blog">
+        Index of notes
+      </RouteLink>
+    );
   }
 
   return (
@@ -72,25 +92,49 @@ function Header() {
         position: "relative",
       }}
     >
-      <div
+      <Flex
         sx={{
-          display: "flex",
           justifyContent: "space-between",
           width: ["100%", "100%", "auto"],
         }}
       >
-        <RouteLink href="/">
-          <a>
-            <Logo />
-          </a>
-        </RouteLink>
+        <Flex
+          sx={{
+            alignItems: "center",
+          }}
+        >
+          <RouteLink href="/">
+            <div>
+              <Logo
+                sx={{
+                  display: "inline-block",
+                  verticalAlign: "middle",
+                }}
+              />
+            </div>
+          </RouteLink>
+          {page === "blog" && (
+            <div
+              sx={{
+                marginLeft: 4,
+                textTransform: "uppercase",
+                fontWeight: "400",
+                fontSize: 3,
+                color: "#201c1c",
+                letterSpacing: ".15rem",
+              }}
+            >
+              / Notes
+            </div>
+          )}
+        </Flex>
         <MenuButton
           sx={{
             display: ["block", "block", "none"],
           }}
-          onClick={handleClick}
+          onClick={handleMenu}
         />
-      </div>
+      </Flex>
       <Flex
         as="nav"
         sx={{
@@ -98,12 +142,11 @@ function Header() {
         }}
         ref={ref}
       >
-        <RouteLink variant="nav" href="/blog">
-          Notes
-        </RouteLink>
-        <RouteLink variant="nav" href="https://github.com/andesol">
+        {pageDependentNavItem}
+
+        <Link variant="nav" href="https://github.com/andesol" target="_blank">
           <IconGithub />
-        </RouteLink>
+        </Link>
       </Flex>
     </Flex>
   );

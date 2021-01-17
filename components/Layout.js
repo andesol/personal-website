@@ -6,7 +6,7 @@ import Footer from "@components/Footer";
 import { Container } from "theme-ui";
 import Prism from "prismjs";
 
-function Layout({ children, pageTitle, ...props }) {
+function Layout({ children, pageTitle, page, ...props }) {
   useEffect(() => {
     if (typeof window !== "undefined") {
       Prism.highlightAll();
@@ -18,7 +18,7 @@ function Layout({ children, pageTitle, ...props }) {
       <Seo pageTitle={pageTitle} />
       {/* <GlobalStyles /> */}
       <Container variant="mainContainer">
-        <Header title="andesol" />
+        <Header title="andesol" page={page} />
         {children}
       </Container>
       <Footer />
