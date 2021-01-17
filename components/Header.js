@@ -1,61 +1,18 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { useState, useEffect, useRef } from "react";
+import { useRef } from "react";
 import { jsx, Flex, MenuButton, Link } from "theme-ui";
 
 import IconGithub from "@components/IconGithub";
 import Logo from "@components/Logo";
 import RouteLink from "@components/RouteLink";
 
-import gsap from "gsap";
-
-let toggleNav;
-let toggleNavItems;
+import useHamburgerMenu from "../hooks/useHamburgerMenu";
 
 function Header({ page }) {
-  console.log(page);
-  const [open, setOpen] = useState(false);
   const ref = useRef();
 
-  useEffect(() => {
-    const nav = ref.current;
-
-    gsap.set(nav, { height: "auto" });
-    gsap.set(nav.querySelectorAll("a"), { opacity: 1 });
-
-    toggleNav = gsap.from(nav, {
-      height: 0,
-      paused: true,
-      duration: 0.4,
-      ease: "power1",
-    });
-
-    toggleNavItems = gsap.from(nav.querySelectorAll("a"), {
-      left: "10rem",
-      opacity: 0,
-      paused: true,
-      duration: 0.4,
-      ease: "power1",
-      stagger: 0.01,
-    });
-
-    if (window.innerWidth >= 980) {
-      toggleNav.seek(0.4);
-      toggleNavItems.seek(0.4);
-    }
-  }, [ref]);
-
-  function handleMenu(event) {
-    event.preventDefault();
-    if (open) {
-      toggleNav.reverse();
-      toggleNavItems.reverse();
-    } else {
-      toggleNav.play();
-      toggleNavItems.play();
-    }
-    setOpen(!open);
-  }
+  const { handleMenu } = useHamburgerMenu(ref);
 
   let pageDependentNavItem;
   if (page === "home") {
