@@ -4,7 +4,7 @@ import matter from "gray-matter";
 
 export default function blogPage({ posts, title, ...props }) {
   return (
-    <Layout pageTitle={title} page="blog">
+    <Layout pageTitle={`${title} | Notes`} page="blog">
       <main>
         <section>
           <PostList posts={posts} />

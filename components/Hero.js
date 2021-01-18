@@ -1,6 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Box, Heading, Flex } from "theme-ui";
+import { jsx, Box, Heading } from "theme-ui";
 import Sticker from "@components/Sticker";
 
 function Hero() {

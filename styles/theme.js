@@ -122,9 +122,6 @@ export default {
       ":active": {
         color: "primary",
       },
-      ":hover > svg": {
-        fill: "primary",
-      },
     },
     underlined: {
       borderBottom: t => `4px solid ${t.colors.primary}`,

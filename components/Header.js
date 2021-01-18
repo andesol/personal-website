@@ -101,7 +101,17 @@ function Header({ page }) {
       >
         {pageDependentNavItem}
 
-        <Link variant="nav" href="https://github.com/andesol" target="_blank">
+        <Link
+          aria-labe="Link to Github"
+          variant="nav"
+          href="https://github.com/andesol"
+          target="_blank"
+          sx={{
+            ":hover > svg": {
+              fill: "primary",
+            },
+          }}
+        >
           <IconGithub />
         </Link>
       </Flex>

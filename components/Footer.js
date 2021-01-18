@@ -1,8 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 
-import { jsx, Flex, Heading } from "theme-ui";
-import Form from "@components/Form";
+import { jsx } from "theme-ui";
 
 function Footer() {
   return (

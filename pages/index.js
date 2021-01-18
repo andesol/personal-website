@@ -9,7 +9,7 @@ import Layout from "@components/Layout";
 import PostList from "@components/PostList";
 import Hero from "@components/Hero";
 
-export default function indexPage({ posts, title, ...props }) {
+export default function indexPage({ posts, title }) {
   return (
     <Layout pageTitle={title} page="home">
       <main>
@@ -24,14 +24,33 @@ export default function indexPage({ posts, title, ...props }) {
           }}
         >
           <RouterLink
-            variant="underlined"
+            variant="nav"
             href="/blog"
             sx={{
               display: "inline-block",
               margin: "0 auto",
+              ":hover svg": {
+                stroke: "primary",
+              },
             }}
           >
-            Read more
+            Read more{" "}
+            <svg
+              sx={{
+                verticalAlign: "middle",
+              }}
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M13 17l5-5-5-5M6 17l5-5-5-5" />
+            </svg>
           </RouterLink>
         </div>
       </main>
