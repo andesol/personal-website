@@ -2,17 +2,11 @@
 /** @jsx jsx */
 import { jsx, Heading } from "theme-ui";
 import Link from "next/link";
+import Card from "@components/Card";
 
 function Post({ post }) {
   return (
-    <article
-      sx={{
-        marginBottom: 4,
-        padding: 4,
-        boxShadow: "post",
-        borderRadius: "1.2rem",
-      }}
-    >
+    <Card as="article">
       <Heading
         as="h2"
         variant="title"
@@ -25,7 +19,7 @@ function Post({ post }) {
         </Link>
       </Heading>
       <p>{post.frontmatter.summary}</p>
-    </article>
+    </Card>
   );
 }
 

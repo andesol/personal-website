@@ -1,9 +1,7 @@
 import { useEffect } from "react";
 import Seo from "@components/Head";
-import GlobalStyles from "@components/GlobalStyles";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
-import { Container } from "theme-ui";
 import Prism from "prismjs";
 
 function Layout({ children, pageTitle, page }) {
@@ -16,10 +14,8 @@ function Layout({ children, pageTitle, page }) {
   return (
     <>
       <Seo pageTitle={pageTitle} />
-      <Container variant="mainContainer">
-        <Header title="andesol" page={page} />
-        {children}
-      </Container>
+      <Header title="andesol" page={page} />
+      {children}
       <Footer />
     </>
   );

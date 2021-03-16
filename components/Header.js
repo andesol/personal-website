@@ -1,10 +1,9 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { useRef } from "react";
-import { jsx, Flex, MenuButton, Link } from "theme-ui";
+import { jsx, Flex, MenuButton, Link, Container } from "theme-ui";
 
-import IconGithub from "@components/IconGithub";
-import Logo from "@components/Logo";
+import { Logo, IconGithub } from "@components/icons";
 import RouteLink from "@components/RouteLink";
 
 import useHamburgerMenu from "../hooks/useHamburgerMenu";
@@ -36,86 +35,90 @@ function Header({ page }) {
   }
 
   return (
-    <Flex
-      as="header"
+    <header
       sx={{
-        alignItems: "center",
-        display: "flex",
-        flexDirection: ["column", "column", "row"],
-        gap: "1rem",
-        justifyContent: "space-between",
-        overflow: "hidden",
-        padding: "1.5rem 0rem calc(1.5rem + 9px) 0rem",
-        position: "relative",
+        width: "100%",
+        backgroundColor: "secondary",
+        paddingBottom: 2,
       }}
     >
-      <Flex
+      <Container
+        variant="mainContainer"
         sx={{
+          flexDirection: ["column", "column", "row"],
+          overflow: "hidden",
+          display: "flex",
           justifyContent: "space-between",
-          width: ["100%", "100%", "auto"],
         }}
       >
         <Flex
           sx={{
-            alignItems: "center",
+            justifyContent: "space-between",
+            width: ["100%", "100%", "auto"],
           }}
         >
-          <RouteLink href="/">
-            <div>
-              <Logo
+          <Flex
+            sx={{
+              alignItems: "center",
+            }}
+          >
+            <RouteLink href="/">
+              <div>
+                <Logo
+                  sx={{
+                    display: "inline-block",
+                    verticalAlign: "middle",
+                  }}
+                />
+              </div>
+            </RouteLink>
+            {page === "blog" && (
+              <div
                 sx={{
-                  display: "inline-block",
-                  verticalAlign: "middle",
+                  marginLeft: 4,
+                  textTransform: "uppercase",
+                  fontWeight: "400",
+                  fontSize: 3,
+                  color: "#201c1c",
+                  letterSpacing: ".15rem",
                 }}
-              />
-            </div>
-          </RouteLink>
-          {page === "blog" && (
-            <div
-              sx={{
-                marginLeft: 4,
-                textTransform: "uppercase",
-                fontWeight: "400",
-                fontSize: 3,
-                color: "#201c1c",
-                letterSpacing: ".15rem",
-              }}
-            >
-              / Notes
-            </div>
-          )}
+              >
+                / Notes
+              </div>
+            )}
+          </Flex>
+          <MenuButton
+            sx={{
+              display: ["block", "block", "none"],
+            }}
+            onClick={handleMenu}
+          />
         </Flex>
-        <MenuButton
+        <Flex
+          as="nav"
           sx={{
-            display: ["block", "block", "none"],
+            flexDirection: ["column", "column", "row"],
           }}
-          onClick={handleMenu}
-        />
-      </Flex>
-      <Flex
-        as="nav"
-        sx={{
-          flexDirection: ["column", "column", "row"],
-        }}
-        ref={ref}
-      >
-        {pageDependentNavItem}
-
-        <Link
-          aria-labe="Link to Github"
-          variant="nav"
-          href="https://github.com/andesol"
-          target="_blank"
-          sx={{
-            ":hover > svg": {
-              fill: "primary",
-            },
-          }}
+          ref={ref}
         >
-          <IconGithub />
-        </Link>
-      </Flex>
-    </Flex>
+          {pageDependentNavItem}
+
+          <Link
+            aria-label="Link to Github"
+            variant="nav"
+            href="https://github.com/andesol"
+            target="_blank"
+            sx={{
+              ":hover > svg": {
+                fill: "primary",
+              },
+            }}
+          >
+            <IconGithub />
+          </Link>
+        </Flex>
+      </Container>
+    </header>
   );
 }
 

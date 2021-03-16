@@ -10,6 +10,7 @@ function Footer() {
         display: "grid",
         placeItems: "center",
         minHeight: "5rem",
+        backgroundColor: "secondary",
       }}
     >
       2020 - andesol

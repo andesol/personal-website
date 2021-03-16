@@ -7,7 +7,7 @@ export default {
     text: "#000",
     background: "#fff",
     primary: "#FF6122",
-    secondary: "#D8F793",
+    secondary: "#EEE5E9",
     accent: "#EDAE49",
     highlight: "00798C",
     muted: "#E6E6E6",
@@ -58,11 +58,12 @@ export default {
     heading: 1.125,
   },
   shadows: {
-    sticker: `3px 3px 3px 2px rgba(0,0,0,0.3)`,
+    sticker: `3px 3px 3px 2px rgba(0,0,0,0.18)`,
     post: "0 2px 25px 0 rgba(209,209,209,.5)",
   },
   sizes: {
-    hero: "350px",
+    mainWidth: "800px",
+    heroHeight: "450px",
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   styles: {
@@ -101,6 +102,14 @@ export default {
   layout: {
     mainContainer: {
       width: "90%",
+      maxWidth: "900px",
+    },
+    heroContainer: {
+      width: "100%",
+      maxWidth: "900px",
+    },
+    postContainer: {
+      width: "90%",
       maxWidth: "700px",
     },
   },
@@ -109,14 +118,13 @@ export default {
       display: "inline-flex",
       justifyContent: "center",
       alignItems: "center",
-      marginRight: 1,
       position: "relative",
+      fontSize: 3,
+      fontFamily: "heading",
       left: "0px",
       padding: "1rem 1rem",
-      fontWeight: "bold",
       ":hover": {
         transform: "translateY(-1.5px)",
-        boxShadow: t => `inset 0 -3px 0 0 ${t.colors.primary}`,
         color: "primary",
       },
       ":active": {
@@ -124,7 +132,8 @@ export default {
       },
     },
     underlined: {
-      borderBottom: t => `4px solid ${t.colors.primary}`,
+      textDecoration: "underline",
+      color: "primary",
       padding: 2,
     },
   },

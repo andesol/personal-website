@@ -12,19 +12,20 @@ function Sticker({ color, children, ...props }) {
         fontWeight: "bold",
         position: "relative",
         color: "white",
-        transform: "rotate(-1.5deg)",
+        transform: "rotate(-0.95deg)",
         marginRight: 3,
         "::before": {
           position: "absolute",
           display: "inline-block",
           content: '""',
           width: "108%",
-          height: "30px",
+          height: "35px",
           backgroundColor: () => color,
           top: "2px",
           left: "-6px",
           zIndex: "-1",
           boxShadow: "sticker",
+          borderRadius: "0.2rem",
         },
       }}
     >

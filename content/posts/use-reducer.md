@@ -53,7 +53,7 @@ The general rules for writing reducers say they shouldn't mutate state, but make
 
 A common pattern is to combine `useReducer` and `useContext` to create a global state that can be accessed by any component that may require it (thus, avoiding _prop drilling_).
 
-Here's an application of `useReducer` to manage the local state. `Shows` is a component with a list of TV shows we can like or dislike.
+Here's an application of `useReducer` to manage local state. `Shows` is a component with a list of TV shows we can like or dislike.
 
 ```js
 import React, { useReducer } from "react";
@@ -70,23 +70,23 @@ function showsReducer(state, action) {
 
     switch (action.type) {
 
-    case "LIKE":
-        return state.map(show => (
-            show.id === action.id
-                ? { ...show, likes: show.likes + 1 }
-                : show;
-        ));
+        case "LIKE":
+            return state.map(show => (
+                show.id === action.id
+                    ? { ...show, likes: show.likes + 1 }
+                    : show;
+            ));
 
-    case "DISLIKE":
-        return state.map(show => (
-            show.id === action.id
-                ? { ...show, likes: show.likes - 1 }
-                : show;
-        ));
+        case "DISLIKE":
+            return state.map(show => (
+                show.id === action.id
+                    ? { ...show, likes: show.likes - 1 }
+                    : show;
+            ));
 
-    default:
-        throw new Error(`Unhandled action: ${action.type}`);
-    }
+        default:
+            throw new Error(`Unhandled action: ${action.type}`);
+        }
 }
 
 // List of shows component

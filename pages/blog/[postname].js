@@ -6,30 +6,53 @@ import RouteLink from "@components/RouteLink";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import Layout from "@components/Layout";
+import { Container } from "theme-ui";
 
 export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
   if (!frontmatter) return <React.Fragment></React.Fragment>;
 
   return (
     <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`} page="article">
-      <article sx={{ fontSize: 3 }}>
-        <h1>{frontmatter.title}</h1>
-        <div>
-          <ReactMarkdown source={markdownBody} />
-        </div>
-      </article>
-      <div
-        sx={{
-          display: "grid",
-          placeItems: "center",
-          marginTop: 2,
-          marginBottom: 2,
-        }}
-      >
-        <RouteLink variant="underlined" href="/blog">
-          Back to index
-        </RouteLink>
-      </div>
+      <main>
+        <Container
+          sx={{
+            marginTop: "5rem",
+          }}
+          variant="postContainer"
+        >
+          <article sx={{ fontSize: 3 }}>
+            <h1
+              sx={{
+                fontSize: 7,
+              }}
+            >
+              {frontmatter.title}
+            </h1>
+            <div>
+              <ReactMarkdown source={markdownBody} />
+            </div>
+          </article>
+          <div
+            sx={{
+              display: "grid",
+              placeItems: "center",
+              marginTop: 2,
+              marginBottom: 2,
+            }}
+          >
+            <hr
+              sx={{
+                margin: "2rem auto",
+                width: "70%",
+                borderBottom: "1px solid lightgrey",
+              }}
+            />
+            <RouteLink variant="nav" href="/blog">
+              Back to index
+            </RouteLink>
+          </div>
+        </Container>
+      </main>
     </Layout>
   );
 }
