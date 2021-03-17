@@ -20,8 +20,6 @@ export default function useHamburgerMenu(ref) {
       ease: "power1",
     });
 
-    console.log("toggleNav:", toggleNav);
-
     toggleNavItems = gsap.from(nav.querySelectorAll("a"), {
       left: "10rem",
       opacity: 0,
@@ -36,8 +34,6 @@ export default function useHamburgerMenu(ref) {
       toggleNavItems.seek(0.4);
     }
   }, [ref]);
-
-  console.log("hook", toggleNav);
 
   function handleMenu(event) {
     event.preventDefault();

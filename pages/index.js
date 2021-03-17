@@ -6,7 +6,6 @@ import matter from "gray-matter";
 
 import RouterLink from "@components/RouteLink";
 import Layout from "@components/Layout";
-import PostList from "@components/PostList";
 import Hero from "@components/Hero";
 import { IconArrow } from "@components/icons";
 import Grid from "@components/Grid";
@@ -47,7 +46,7 @@ export default function indexPage({ posts, title }) {
                 alignItems: "center",
               }}
             >
-              Read more
+              All notes
               <IconArrow sx={{ position: "relative" }} />
             </Flex>
           </RouterLink>

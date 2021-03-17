@@ -9,6 +9,16 @@ import RouteLink from "@components/RouteLink";
 import useHamburgerMenu from "../hooks/useHamburgerMenu";
 
 function Header({ page }) {
+  let headerTheme = {};
+
+  if (page === "home") {
+    headerTheme.background = "dark";
+    headerTheme.color = "white";
+  } else {
+    headerTheme.background = "white";
+    headerTheme.color = "black";
+  }
+
   const ref = useRef();
 
   const { handleMenu } = useHamburgerMenu(ref);
@@ -16,19 +26,19 @@ function Header({ page }) {
   let pageDependentNavItem;
   if (page === "home") {
     pageDependentNavItem = (
-      <RouteLink variant="nav" href="/blog">
+      <RouteLink sx={{ color: headerTheme.color }} variant="nav" href="/blog">
         Notes
       </RouteLink>
     );
   } else if (page === "blog") {
     pageDependentNavItem = (
-      <RouteLink variant="nav" href="/">
+      <RouteLink sx={{ color: headerTheme.color }} variant="nav" href="/">
         Home
       </RouteLink>
     );
   } else if (page === "article") {
     pageDependentNavItem = (
-      <RouteLink variant="nav" href="/blog">
+      <RouteLink sx={{ color: headerTheme.color }} variant="nav" href="/blog">
         Index of notes
       </RouteLink>
     );
@@ -38,8 +48,9 @@ function Header({ page }) {
     <header
       sx={{
         width: "100%",
-        backgroundColor: "secondary",
+        backgroundColor: headerTheme.background,
         paddingBottom: 2,
+        color: "white",
       }}
     >
       <Container
@@ -68,6 +79,7 @@ function Header({ page }) {
                   sx={{
                     display: "inline-block",
                     verticalAlign: "middle",
+                    fill: headerTheme.color,
                   }}
                 />
               </div>
@@ -109,6 +121,7 @@ function Header({ page }) {
             href="https://github.com/andesol"
             target="_blank"
             sx={{
+              fill: headerTheme.color,
               ":hover > svg": {
                 fill: "primary",
               },

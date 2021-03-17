@@ -7,11 +7,11 @@ export default {
     text: "#000",
     background: "#fff",
     primary: "#FF6122",
-    secondary: "#EEE5E9",
-    accent: "#EDAE49",
-    highlight: "00798C",
-    muted: "#E6E6E6",
-    grey: "#",
+    dark: "#161616",
+    accent: "",
+    highlight: "",
+    muted: "",
+    grey: "",
   },
   fonts: {
     body:
@@ -134,6 +134,7 @@ export default {
     underlined: {
       textDecoration: "underline",
       color: "primary",
+      fontWeight: t => t.fontWeights.bold,
       padding: 2,
     },
   },

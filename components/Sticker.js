@@ -20,7 +20,7 @@ function Sticker({ color, children, ...props }) {
           content: '""',
           width: "108%",
           height: "35px",
-          backgroundColor: () => color,
+          backgroundColor: "#000",
           top: "2px",
           left: "-6px",
           zIndex: "-1",

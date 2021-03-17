@@ -10,10 +10,11 @@ function Hero() {
     <div>
       <div
         sx={{
+          color: "white",
           height: "40vh",
           minHeight: "450px",
           position: "relative",
-          backgroundColor: "secondary",
+          backgroundColor: "dark",
           margin: "0 auto",
           padding: "2rem",
           clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%)",
@@ -35,9 +36,16 @@ function Hero() {
                 fontSize: 7,
               }}
             >
-              Hello, I'm Andreu
+              Hello, I'm Andreu. I collect here my notes on{" "}
+              <span
+                sx={{
+                  color: "primary",
+                }}
+              >
+                web development
+              </span>
             </Heading>
-            <p
+            {/* <p
               sx={{
                 fontSize: 4,
               }}
@@ -47,7 +55,7 @@ function Hero() {
                 {" "}
                 web development
               </Sticker>
-            </p>
+            </p> */}
           </Box>
         </Container>
       </div>
