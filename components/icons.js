@@ -5,7 +5,6 @@ import { jsx } from "theme-ui";
 export { IconCSS, IconJS, IconReact, IconAngular, IconGithub, IconArrow, Logo };
 
 function Logo(props) {
-  console.log(props);
   return (
     <svg
       {...props}

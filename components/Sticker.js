@@ -3,7 +3,6 @@
 import { jsx } from "theme-ui";
 
 function Sticker({ color, children, ...props }) {
-  console.log(color);
   return (
     <span
       {...props}

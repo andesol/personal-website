@@ -1,9 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, Box, Heading, Container } from "theme-ui";
-import Sticker from "@components/Sticker";
-import IconsCard from "@components/IconsCard";
-import React from "react";
 
 function Hero() {
   return (
@@ -12,7 +9,7 @@ function Hero() {
         sx={{
           color: "white",
           height: "40vh",
-          minHeight: "450px",
+          minHeight: "650px",
           position: "relative",
           backgroundColor: "dark",
           margin: "0 auto",

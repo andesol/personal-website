@@ -11,7 +11,7 @@ export default function mainGrid({ posts }) {
   if (posts === "undefined") return null;
 
   return (
-    <Grid columns={[2, "1fr 1fr"]}>
+    <Grid columns={["1fr", "1fr 1fr", "1fr 1fr"]}>
       <Card>
         <div
           sx={{
