@@ -9,7 +9,7 @@ function Hero() {
         sx={{
           color: "white",
           height: "40vh",
-          minHeight: "650px",
+          minHeight: ["750px", "650px", "550px"],
           position: "relative",
           backgroundColor: "dark",
           margin: "0 auto",
@@ -31,6 +31,7 @@ function Hero() {
             <Heading
               sx={{
                 fontSize: 7,
+                hyphens: "auto",
               }}
             >
               Hello, I'm Andreu. I collect here my notes on{" "}

@@ -49,7 +49,7 @@ function Header({ page }) {
       sx={{
         width: "100%",
         backgroundColor: headerTheme.background,
-        paddingBottom: 2,
+        padding: 3,
         color: "white",
       }}
     >

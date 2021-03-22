@@ -11,7 +11,7 @@ function Card({ children, ...props }) {
         marginBottom: 4,
         padding: 4,
         boxShadow: "post",
-        borderRadius: "1.2rem",
+        borderRadius: "10px",
         backgroundColor: "background",
       }}
     >
