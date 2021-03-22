@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
+    "start": "next start",
     "build": "next build",
-    "start": "next start"
+    "postbuild": "next-sitemap --config next-sitemap.config.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "gray-matter": "^4.0.2",
     "gsap": "^3.5.1",
     "next": "^10.0.3",
+    "next-sitemap": "^1.6.9",
     "prismjs": "^1.23.0",
     "raw-loader": "^4.0.2",
     "react": "^17.0.1",

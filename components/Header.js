@@ -73,16 +73,14 @@ function Header({ page }) {
               alignItems: "center",
             }}
           >
-            <RouteLink href="/">
-              <div>
-                <Logo
-                  sx={{
-                    display: "inline-block",
-                    verticalAlign: "middle",
-                    fill: headerTheme.color,
-                  }}
-                />
-              </div>
+            <RouteLink href="/" aria-label="andesol home" aria>
+              <Logo
+                sx={{
+                  display: "inline-block",
+                  verticalAlign: "middle",
+                  fill: headerTheme.color,
+                }}
+              />
             </RouteLink>
             {page === "blog" && (
               <div

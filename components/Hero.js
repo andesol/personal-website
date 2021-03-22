@@ -29,6 +29,7 @@ function Hero() {
             }}
           >
             <Heading
+              as="h1"
               sx={{
                 fontSize: 7,
                 hyphens: "auto",
