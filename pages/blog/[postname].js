@@ -44,7 +44,8 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
               sx={{
                 margin: "2rem auto",
                 width: "70%",
-                borderBottom: "1px solid lightgrey",
+                borderTop: "1px solid rgba(0, 0, 0, 0.1)",
+                borderBottom: "1px solid rgba(255, 255, 255, 0.3)",
               }}
             />
             <RouteLink variant="nav" href="/blog">

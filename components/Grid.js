@@ -12,33 +12,8 @@ export default function mainGrid({ posts }) {
 
   return (
     <Grid columns={["1fr", "1fr 1fr", "1fr 1fr"]}>
-      <Card>
-        <div
-          sx={{
-            display: "grid",
-            placeItems: "center",
-          }}
-        >
-          <p
-            sx={{
-              fontSize: 3,
-            }}
-          >
-            <RouteLink variant="underlined" href="/contact">
-              Talk to me
-            </RouteLink>
-            . <br />
-            See what I'm doing{" "}
-            <RouteLink variant="underlined" href="/now">
-              now
-            </RouteLink>
-            .<br /> Or take a look at what's below.{" "}
-          </p>
-        </div>
-      </Card>
-      <IconsCard />
       {posts &&
-        posts.map(post => {
+        posts.map((post, i) => {
           return <PostCard key={post.slug} post={post} />;
         })}
     </Grid>

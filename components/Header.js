@@ -12,7 +12,7 @@ function Header({ page }) {
   let headerTheme = {};
 
   if (page === "home") {
-    headerTheme.background = "dark";
+    headerTheme.background = "darkBlue";
     headerTheme.color = "white";
   } else {
     headerTheme.background = "white";

@@ -7,7 +7,7 @@ summary: "One of the most useful React Hooks, with examples"
 
 Both **`useReducer`** and **`useState`** are similar in the sense that they both serve the purpose of introducing state into functional components.
 
-If we forget for a moment about common naming conventions, the syntax may look quite similar. Taking the classical counter app as an example:
+If we forget for a moment about common naming conventions, the syntax may look quite similar. Taking the classic counter app as an example:
 
 ```js
 // Counter with useEffect
@@ -25,7 +25,7 @@ export default function App() {
 }
 ```
 
-And now with `useReducer`
+And now with `useReducer`:
 
 ```js
 // Counter with useReducer
@@ -47,7 +47,7 @@ export default function App() {
 }
 ```
 
-One noteworthy difference is that `useReducer` takes a so-called _reducer_ function before the initial value. This function takes the current state and an _action_ and returns a new single piece of state, `(state, action) => newState`.
+A noteworthy difference is that `useReducer` takes a so-called _reducer_ function before the initial value. This function takes the current state and an _action_ and returns a new single piece of state, `(state, action) => newState`.
 
 The general rules for writing reducers say they shouldn't mutate state, but make an immutable update, and there cannot contain side-effects (reducers are _pure functions_).
 

@@ -11,7 +11,7 @@ function Hero() {
           height: "40vh",
           minHeight: ["750px", "650px", "550px"],
           position: "relative",
-          backgroundColor: "dark",
+          backgroundColor: "darkBlue",
           margin: "0 auto",
           padding: "2rem",
           clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%)",
