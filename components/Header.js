@@ -12,11 +12,9 @@ function Header({ page }) {
   let headerTheme = {};
 
   if (page === "home") {
-    headerTheme.background = "darkBlue";
-    headerTheme.color = "white";
+    headerTheme.background = "pale";
   } else {
     headerTheme.background = "white";
-    headerTheme.color = "black";
   }
 
   const ref = useRef();
@@ -26,20 +24,20 @@ function Header({ page }) {
   let pageDependentNavItem;
   if (page === "home") {
     pageDependentNavItem = (
-      <RouteLink sx={{ color: headerTheme.color }} variant="nav" href="/blog">
-        Notes
+      <RouteLink sx={{ color: "fakeBlack" }} variant="nav" href="/blog">
+        Articles
       </RouteLink>
     );
   } else if (page === "blog") {
     pageDependentNavItem = (
-      <RouteLink sx={{ color: headerTheme.color }} variant="nav" href="/">
+      <RouteLink sx={{ color: "fakeBlack" }} variant="nav" href="/">
         Home
       </RouteLink>
     );
   } else if (page === "article") {
     pageDependentNavItem = (
-      <RouteLink sx={{ color: headerTheme.color }} variant="nav" href="/blog">
-        Index of notes
+      <RouteLink sx={{ color: "fakeBlack" }} variant="nav" href="/blog">
+        Index
       </RouteLink>
     );
   }
@@ -49,7 +47,7 @@ function Header({ page }) {
       sx={{
         width: "100%",
         backgroundColor: headerTheme.background,
-        padding: 3,
+        paddingTop: 3,
         color: "white",
       }}
     >
@@ -119,9 +117,9 @@ function Header({ page }) {
             href="https://github.com/andesol"
             target="_blank"
             sx={{
-              fill: headerTheme.color,
+              fill: "fakeBlack",
               ":hover > svg": {
-                fill: "primary",
+                fill: "accent",
               },
             }}
           >

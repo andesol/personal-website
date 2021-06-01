@@ -1,7 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { Container, jsx, Link } from "theme-ui";
-import nextLink from "next/link";
+import { Container, jsx } from "theme-ui";
 import PostCard from "@components/PostCard";
 
 export default function PostList({ posts }) {

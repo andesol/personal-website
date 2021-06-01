@@ -1,60 +1,45 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, Box, Heading, Container } from "theme-ui";
+import Avatar from "components/Avatar";
 
 function Hero() {
   return (
     <div>
       <div
         sx={{
-          color: "white",
-          height: "40vh",
-          minHeight: ["750px", "650px", "550px"],
+          color: "fakeBlack",
+          minHeight: ["650px", "550px", "450px"],
           position: "relative",
-          backgroundColor: "darkBlue",
+          backgroundColor: "pale",
           margin: "0 auto",
           padding: "2rem",
-          clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%)",
+          zIndex: 2,
         }}
       >
         <Container variant="heroContainer">
           <Box
             sx={{
               display: "flex",
-              flexDirection: "column",
               justifyContent: "center",
-              alignItems: "flex-start",
-              marginTop: "6vw",
+              alignItems: "center",
+              marginTop: "5vw",
               padding: 0,
             }}
           >
             <Heading
               as="h1"
               sx={{
-                fontSize: 7,
+                fontSize: 6,
+                width: "65%",
+                paddingRight: 4,
                 hyphens: "auto",
               }}
             >
-              Hello, I'm Andreu. I collect here my notes on{" "}
-              <span
-                sx={{
-                  color: "primary",
-                }}
-              >
-                web development
-              </span>
+              Hello, I'm Andreu! Here you can find some notes on
+              <span sx={{ color: "accent" }}> web development</span>.
             </Heading>
-            {/* <p
-              sx={{
-                fontSize: 4,
-              }}
-            >
-              Here I collect some notes about
-              <Sticker sx={{ marginLeft: "10px" }} color="primary">
-                {" "}
-                web development
-              </Sticker>
-            </p> */}
+            <Avatar />
           </Box>
         </Container>
       </div>

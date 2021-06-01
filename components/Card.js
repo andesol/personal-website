@@ -8,11 +8,15 @@ function Card({ children, ...props }) {
     <Box
       {...props}
       sx={{
-        marginBottom: 4,
         padding: 4,
-        boxShadow: "post",
+        // boxShadow: "post",
         borderRadius: "10px",
         backgroundColor: "background",
+        ":hover": {
+          transform: "translateY(-2px)",
+          transition: "ease 0.3s",
+          boxShadow: "card",
+        },
       }}
     >
       {children}

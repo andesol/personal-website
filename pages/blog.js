@@ -1,14 +1,16 @@
 import Layout from "@components/Layout";
 import PostList from "@components/PostList";
+import { Container } from "theme-ui";
+import Grid from "components/Grid";
 import matter from "gray-matter";
 
 export default function blogPage({ posts, title, ...props }) {
   return (
     <Layout pageTitle={`${title} | Notes`} page="blog">
       <main>
-        <section>
-          <PostList posts={posts} />
-        </section>
+        <Container variant="mainContainer">
+          <Grid posts={posts} />
+        </Container>
       </main>
     </Layout>
   );

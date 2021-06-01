@@ -15,41 +15,50 @@ export default function indexPage({ posts, title }) {
     <Layout pageTitle={title} page="home">
       <main>
         <Hero />
-        <Container
-          variant="mainContainer"
-          sx={{
-            marginTop: "-100px",
-            position: "relative",
-          }}
-        >
-          <Grid posts={posts} />
-        </Container>
         <div
           sx={{
-            display: "grid",
-            placeItems: "center",
+            backgroundColor: "contrast",
+            width: "100%",
+            position: "relative",
+            zIndex: "1",
+            padding: "5vw",
           }}
         >
-          <RouterLink
-            variant="nav"
-            href="/blog"
+          <Container variant="mainContainer">
+            <Grid posts={posts} />
+          </Container>
+          <div
             sx={{
-              display: "inline-block",
-              margin: "0 auto",
-              ":hover svg": {
-                stroke: "primary",
-              },
+              display: "grid",
+              placeItems: "center",
             }}
           >
-            <Flex
+            <RouterLink
+              href="/blog"
+              variant="underlined"
               sx={{
-                alignItems: "center",
+                display: "inline-block",
+                marginTop: 4,
+                color: "fakeBlack",
               }}
             >
-              All notes
-              <IconArrow sx={{ position: "relative" }} />
-            </Flex>
-          </RouterLink>
+              <Flex
+                sx={{
+                  displat: "inline-flex",
+                  alignItems: "center",
+                  paddingTop: 2,
+                  paddingBottom: 2,
+                  paddingLeft: 3,
+                  paddingRight: 3,
+                  backgroundColor: "pale",
+                  borderRadius: "10px",
+                }}
+              >
+                Browse notes
+                <IconArrow sx={{ position: "relative" }} />
+              </Flex>
+            </RouterLink>
+          </div>
         </div>
       </main>
     </Layout>

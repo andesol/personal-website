@@ -1,19 +1,82 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 
-import { jsx } from "theme-ui";
+import { jsx, Flex, Link } from "theme-ui";
+import RouteLink from "./RouteLink";
+
+const CURRENT_YEAR = new Date().getFullYear();
 
 function Footer() {
   return (
     <footer
       sx={{
-        display: "grid",
-        placeItems: "center",
-        minHeight: "5rem",
-        backgroundColor: "secondary",
+        display: "flex",
+        backgroundColor: "pale",
+        padding: 4,
       }}
     >
-      2020 - andesol
+      <Flex sx={{ alignItems: "center", margin: "auto" }}>
+        <span>&copy; {CURRENT_YEAR} andesol 🌿</span>
+        <nav sx={{ color: "black" }}>
+          <Flex>
+            <li>
+              <RouteLink variant="underlined" href="/now">
+                Now
+              </RouteLink>
+            </li>
+            <li>
+              <Link
+                href="https://github.com/andesol"
+                target="_blank"
+                rel="noopener noreferer"
+                variant="underlined"
+              >
+                Github
+              </Link>
+            </li>
+            <li
+              sx={{
+                position: "relative",
+              }}
+            >
+              <Link
+                sx={{
+                  "&:hover": {
+                    span: {
+                      visibility: "visible",
+                      display: "inline-block",
+                    },
+                  },
+                }}
+                variant="underlined"
+                href="mailto:andesol@protonmail.com"
+              >
+                Contact
+                <span
+                  sx={{
+                    visibility: "hidden",
+                    width: "120px",
+                    backgroundColor: "background",
+                    color: "text",
+                    textAlign: "center",
+                    padding: 2,
+                    borderRadius: "6px",
+                    width: "220px",
+                    bottom: "0",
+                    left: "105%",
+                    position: "absolute",
+                    zIndex: 1,
+                    boxShadow: "post",
+                  }}
+                >
+                  Wow! Somebody got here. I don't have a contact form, but click
+                  and send an email!
+                </span>
+              </Link>
+            </li>
+          </Flex>
+        </nav>
+      </Flex>
     </footer>
   );
 }
