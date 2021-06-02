@@ -116,6 +116,7 @@ function Header({ page }) {
             variant="nav"
             href="https://github.com/andesol"
             target="_blank"
+            rel="noopener noreferer"
             sx={{
               fill: "fakeBlack",
               ":hover > svg": {

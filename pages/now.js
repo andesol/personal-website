@@ -34,7 +34,7 @@ export default function contactPage({ title }) {
             <p>
               I started with Angular a couple of month ago. I knew React but I
               wanted to get a different view on Javascript (or Typescript, for
-              that matters) front end frameworks I tried to create an{" "}
+              that matters) front end frameworks. I started an{" "}
               <Link
                 variant="underlined"
                 href="https://github.com/andesol/quizz-app"

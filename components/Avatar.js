@@ -21,6 +21,7 @@ export default function Avatar() {
         alt="Picture of the author"
         layout="fill"
         objectFit="cover"
+        priority="true"
       />
     </div>
   );
