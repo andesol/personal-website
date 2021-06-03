@@ -2,9 +2,20 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 
-export { IconCSS, IconJS, IconReact, IconAngular, IconGithub, IconArrow, Logo };
+export {
+  IconArrowDown,
+  IconMail,
+  IconCSS,
+  IconJS,
+  IconReact,
+  IconAngular,
+  IconGithub,
+  IconArrow,
+  Logo,
+};
 
 function Logo(props) {
+  console.log("logo", props);
   return (
     <svg
       {...props}
@@ -101,10 +112,10 @@ function IconAngular() {
   );
 }
 
-function IconGithub({ sx }) {
+function IconGithub(props) {
   return (
     <svg
-      {...sx}
+      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -129,6 +140,45 @@ function IconArrow() {
       strokeLinejoin="round"
     >
       <path d="M13 17l5-5-5-5M6 17l5-5-5-5" />
+    </svg>
+  );
+}
+
+function IconMail(props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#000000"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+      <polyline points="22,6 12,13 2,6"></polyline>
+    </svg>
+  );
+}
+
+function IconArrowDown(props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="42"
+      height="42"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#000000"
+      strokeWidth="1.5"
+      strokeLinecap="square"
+      strokeLinejoin="arcs"
+      {...props}
+    >
+      <path d="M6 9l6 6 6-6" />
     </svg>
   );
 }

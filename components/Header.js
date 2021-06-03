@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { jsx, Flex, MenuButton, Link, Container } from "theme-ui";
 
-import { Logo, IconGithub } from "@components/icons";
+import { Logo } from "@components/icons";
 import RouteLink from "@components/RouteLink";
 
 import useHamburgerMenu from "../hooks/useHamburgerMenu";
@@ -11,36 +11,15 @@ import useHamburgerMenu from "../hooks/useHamburgerMenu";
 function Header({ page }) {
   let headerTheme = {};
 
-  if (page === "home") {
-    headerTheme.background = "pale";
-  } else {
-    headerTheme.background = "white";
-  }
-
   const ref = useRef();
 
   const { handleMenu } = useHamburgerMenu(ref);
 
-  let pageDependentNavItem;
-  if (page === "home") {
-    pageDependentNavItem = (
-      <RouteLink sx={{ color: "fakeBlack" }} variant="nav" href="/blog">
-        Articles
-      </RouteLink>
-    );
-  } else if (page === "blog") {
-    pageDependentNavItem = (
-      <RouteLink sx={{ color: "fakeBlack" }} variant="nav" href="/">
-        Home
-      </RouteLink>
-    );
-  } else if (page === "article") {
-    pageDependentNavItem = (
-      <RouteLink sx={{ color: "fakeBlack" }} variant="nav" href="/blog">
-        Index
-      </RouteLink>
-    );
-  }
+  let pageDependentNavItem = {
+    home: "Articles",
+    blog: "Home",
+    article: "Index",
+  };
 
   return (
     <header
@@ -48,6 +27,7 @@ function Header({ page }) {
         width: "100%",
         backgroundColor: headerTheme.background,
         paddingTop: 3,
+        paddingBottom: 3,
         color: "white",
       }}
     >
@@ -76,24 +56,9 @@ function Header({ page }) {
                 sx={{
                   display: "inline-block",
                   verticalAlign: "middle",
-                  fill: headerTheme.color,
                 }}
               />
             </RouteLink>
-            {page === "blog" && (
-              <div
-                sx={{
-                  marginLeft: 4,
-                  textTransform: "uppercase",
-                  fontWeight: "400",
-                  fontSize: 3,
-                  color: "#201c1c",
-                  letterSpacing: ".15rem",
-                }}
-              >
-                / Notes
-              </div>
-            )}
           </Flex>
           <MenuButton
             sx={{
@@ -109,22 +74,17 @@ function Header({ page }) {
           }}
           ref={ref}
         >
-          {pageDependentNavItem}
+          <RouteLink variant="nav" href="/blog">
+            {pageDependentNavItem[page]}
+          </RouteLink>
 
           <Link
-            aria-label="Link to Github"
             variant="nav"
             href="https://github.com/andesol"
             target="_blank"
             rel="noopener noreferer"
-            sx={{
-              fill: "fakeBlack",
-              ":hover > svg": {
-                fill: "accent",
-              },
-            }}
           >
-            <IconGithub />
+            Github
           </Link>
         </Flex>
       </Container>

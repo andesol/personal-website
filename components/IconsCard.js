@@ -1,7 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, Flex } from "theme-ui";
-import Card from "@components/Card";
 import { IconCSS, IconJS, IconReact, IconAngular } from "@components/icons";
 
 export default function IconCards(props) {

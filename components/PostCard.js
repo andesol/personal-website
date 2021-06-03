@@ -1,12 +1,11 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Heading } from "theme-ui";
+import { jsx, Heading, Card } from "theme-ui";
 import Link from "next/link";
-import Card from "@components/Card";
 
 function Post({ post }) {
   return (
-    <Card as="article">
+    <Card as="article" variant="article">
       <Heading
         as="h2"
         variant="title"

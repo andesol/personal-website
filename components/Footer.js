@@ -11,7 +11,7 @@ function Footer() {
     <footer
       sx={{
         display: "flex",
-        backgroundColor: "pale",
+        backgroundColor: "gray",
         padding: 4,
       }}
     >

@@ -9,8 +9,10 @@ export default {
     fakeBlack: "#161616",
     pale: "#F9ECCC",
     contrast: "#5386E4",
-    accent: "#D52941",
+    red: "#D52941",
+    accent: "#FFE37E",
     muted: "dimgray",
+    gray: "#F7F7F7",
   },
   fonts: {
     body:
@@ -57,9 +59,8 @@ export default {
     heading: 1.125,
   },
   shadows: {
-    sticker: `3px 3px 3px 2px rgba(0,0,0,0.18)`,
-    post: "0 2px 25px 0 rgba(209,209,209,.5), -2px -2px 25px 0 red",
-    card: t => `3px 5px ${t.colors.accent}, -3px -5px red`,
+    post: "0px 2px 25px 0px rgba(210,210,210,0.5)",
+    avatar: "0 4px 4px 0 rgba(0,0,0,.25)",
   },
   sizes: {
     mainWidth: "800px",
@@ -76,7 +77,30 @@ export default {
     },
   },
   // variants for built-in components
-  buttons: {
+  buttons: {},
+  cards: {
+    article: {
+      paddingTop: 3,
+      paddingBottom: 3,
+      paddingLeft: 4,
+      paddingRight: 4,
+      boxShadow: "0 2px 25px 0 rgba(209,209,209,0.5)",
+      transition: "0.4s ease",
+      "&:hover": {
+        transform: "translateY(-2px)",
+        boxShadow: "2px 8px 25px 0px rgba(210,210,210,0.7)",
+      },
+    },
+    contact: {
+      width: "100%",
+      paddingTop: 3,
+      paddingBottom: 3,
+      paddingLeft: 4,
+      paddingRight: 4,
+      backgroundColor: "accent",
+      color: "fakeBlack",
+      fontSize: 3,
+    },
     primary: {
       borderRadius: "37px",
       cursor: "pointer",
@@ -89,21 +113,39 @@ export default {
     },
   },
   text: {
-    heading: {
+    h1: {
       fontFamily: "heading",
       fontWeight: "heading",
       lineHeight: "heading",
+      fontSize: 6,
     },
-    title: {
+    h2: {
       fontFamily: "heading",
       fontWeight: "heading",
+      lineHeight: "heading",
       fontSize: 5,
+      textAlign: "center",
+      padding: 3,
+    },
+    serif: {
+      fontFamily: "heading",
+    },
+    body: {
+      margin: "0 auto",
+      maxWidth: "50ch",
+      fontFamily: "body",
+      fontWeight: "body",
+      fontSize: 3,
     },
   },
   layout: {
     mainContainer: {
-      width: "90%",
+      width: "95%",
       maxWidth: "900px",
+    },
+    gridContainer: {
+      width: "90%",
+      maxWidth: "700px",
     },
     heroContainer: {
       width: "100%",
@@ -138,8 +180,41 @@ export default {
       display: "inline-block",
       textDecoration: "underline",
       color: "black",
-      fontWeight: t => t.fontWeights.normal,
+      fontWeight: "body",
       padding: 1,
+    },
+    button: {
+      paddingTop: 3,
+      paddingBottom: 3,
+      paddingLeft: 4,
+      paddingRight: 4,
+      fontFamily: "heading",
+      fontSize: 3,
+      borderRadius: "66px",
+      backgroundColor: "accent",
+      color: "fakeBlack",
+      transition: "ease 0.2s",
+      ":hover": {
+        transform: "scale(1.03)",
+      },
+    },
+    contact: {
+      display: "inline-flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "45px",
+      paddingTop: 3,
+      paddingBottom: 3,
+      paddingLeft: 4,
+      paddingRight: 4,
+      borderRadius: "66px",
+      backgroundColor: "background",
+      color: "fakeBlack",
+      fontFamily: "heading",
+      transition: "ease 0.2s",
+      ":hover": {
+        transform: "scale(1.03)",
+      },
     },
   },
 };

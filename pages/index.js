@@ -8,58 +8,17 @@ import RouterLink from "@components/RouteLink";
 import Layout from "@components/Layout";
 import Hero from "@components/Hero";
 import { IconArrow } from "@components/icons";
-import Grid from "@components/Grid";
+import Grid from "@components/GridArticles";
+import SectionArticles from "@components/SectionArticles";
+import SectionAbout from "@components/SectionAbout";
 
 export default function indexPage({ posts, title }) {
   return (
     <Layout pageTitle={title} page="home">
       <main>
         <Hero />
-        <div
-          sx={{
-            backgroundColor: "contrast",
-            width: "100%",
-            position: "relative",
-            zIndex: "1",
-            padding: "5vw",
-          }}
-        >
-          <Container variant="mainContainer">
-            <Grid posts={posts} />
-          </Container>
-          <div
-            sx={{
-              display: "grid",
-              placeItems: "center",
-            }}
-          >
-            <RouterLink
-              href="/blog"
-              variant="underlined"
-              sx={{
-                display: "inline-block",
-                marginTop: 4,
-                color: "fakeBlack",
-              }}
-            >
-              <Flex
-                sx={{
-                  displat: "inline-flex",
-                  alignItems: "center",
-                  paddingTop: 2,
-                  paddingBottom: 2,
-                  paddingLeft: 3,
-                  paddingRight: 3,
-                  backgroundColor: "pale",
-                  borderRadius: "10px",
-                }}
-              >
-                Browse notes
-                <IconArrow sx={{ position: "relative" }} />
-              </Flex>
-            </RouterLink>
-          </div>
-        </div>
+        <SectionArticles posts={posts} />
+        <SectionAbout />
       </main>
     </Layout>
   );

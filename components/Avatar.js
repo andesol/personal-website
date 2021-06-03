@@ -8,11 +8,12 @@ export default function Avatar() {
   return (
     <div
       sx={{
-        borderRadius: "100%",
         position: "relative",
         width: "200px",
         height: "200px",
-        border: t => `4px solid ${t.colors.accent}`,
+        border: "4px solid white",
+        borderRadius: "100%",
+        boxShadow: "avatar",
       }}
     >
       <Image

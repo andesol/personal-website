@@ -1,49 +1,73 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Box, Heading, Container } from "theme-ui";
+import { jsx, Box, Heading, Container, Flex, Text } from "theme-ui";
 import Avatar from "components/Avatar";
+import { IconArrowDown } from "./icons";
 
 function Hero() {
   return (
-    <div>
-      <div
+    <section
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        color: "fakeBlack",
+        minHeight: ["650px", "550px", "450px"],
+        position: "relative",
+        backgroundColor: "gray",
+        padding: "2rem",
+        zIndex: 2,
+      }}
+    >
+      {/* <Container sx={{ border: "1px solid red" }} variant="mainContainer"> */}
+      <Flex
         sx={{
-          color: "fakeBlack",
-          minHeight: ["650px", "550px", "450px"],
-          position: "relative",
-          backgroundColor: "pale",
-          margin: "0 auto",
-          padding: "2rem",
-          zIndex: 2,
+          flexWrap: "wrap",
+          maxWidth: "800px",
+          width: "100%",
+          margin: "auto",
+          alignItems: "center",
+          justifyContent: "space-between",
         }}
       >
-        <Container variant="heroContainer">
-          <Box
+        <Flex
+          sx={{
+            flexDirection: "column",
+            alignItems: ["center", "center", "flex-start"],
+            width: ["100%", "100%", "auto"],
+            order: [2, 2, 1],
+          }}
+        >
+          <Heading as="h1" variant="h1">
+            Hello, I'm Andreu!
+          </Heading>
+          <Text
+            variant="serif"
             sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              marginTop: "5vw",
-              padding: 0,
+              fontSize: 4,
+              paddingTop: 3,
+              textAlign: "center",
             }}
           >
-            <Heading
-              as="h1"
-              sx={{
-                fontSize: 6,
-                width: "65%",
-                paddingRight: 4,
-                hyphens: "auto",
-              }}
-            >
-              Hello, I'm Andreu! Here you can find some notes on
-              <span sx={{ color: "accent" }}> web development</span>.
-            </Heading>
-            <Avatar />
-          </Box>
-        </Container>
+            I collect here some of my notes on web development
+          </Text>
+        </Flex>
+        <Flex
+          sx={{
+            order: [1, 1, 2],
+            width: ["100%", "100%", "auto"],
+            justifyContent: "center",
+            alignItems: "center",
+            paddingBottom: 3,
+          }}
+        >
+          <Avatar />
+        </Flex>
+      </Flex>
+      <div sx={{ textAlign: "center" }}>
+        <IconArrowDown sx={{ stroke: "muted" }} />
       </div>
-    </div>
+      {/* </Container> */}
+    </section>
   );
 }
 

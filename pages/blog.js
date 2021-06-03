@@ -1,7 +1,7 @@
 import Layout from "@components/Layout";
 import PostList from "@components/PostList";
 import { Container } from "theme-ui";
-import Grid from "components/Grid";
+import Grid from "@components/GridArticles";
 import matter from "gray-matter";
 
 export default function blogPage({ posts, title, ...props }) {
