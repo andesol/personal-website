@@ -28,7 +28,7 @@ function Header({ page }) {
         backgroundColor: headerTheme.background,
         paddingTop: 3,
         paddingBottom: 3,
-        color: "white",
+        color: "fakeBlack",
       }}
     >
       <Container

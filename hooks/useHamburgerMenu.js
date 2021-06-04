@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import gsap from "gsap";
 
 let toggleNav;
@@ -20,6 +20,8 @@ export default function useHamburgerMenu(ref) {
       ease: "power1",
     });
 
+    console.log(nav.querySelectorAll("a"));
+
     toggleNavItems = gsap.from(nav.querySelectorAll("a"), {
       left: "10rem",
       opacity: 0,
@@ -28,6 +30,8 @@ export default function useHamburgerMenu(ref) {
       ease: "power1",
       stagger: 0.01,
     });
+
+    console.log(toggleNav, toggleNavItems);
 
     if (window.innerWidth >= 980) {
       toggleNav.seek(0.4);

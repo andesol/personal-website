@@ -140,7 +140,7 @@ export default {
   },
   layout: {
     mainContainer: {
-      width: "95%",
+      width: "90%",
       maxWidth: "900px",
     },
     gridContainer: {

@@ -35,6 +35,7 @@ function Hero() {
             alignItems: ["center", "center", "flex-start"],
             width: ["100%", "100%", "auto"],
             order: [2, 2, 1],
+            textAlign: "center",
           }}
         >
           <Heading as="h1" variant="h1">
@@ -45,7 +46,6 @@ function Hero() {
             sx={{
               fontSize: 4,
               paddingTop: 3,
-              textAlign: "center",
             }}
           >
             I collect here some of my notes on web development
@@ -66,7 +66,6 @@ function Hero() {
       <div sx={{ textAlign: "center" }}>
         <IconArrowDown sx={{ stroke: "muted" }} />
       </div>
-      {/* </Container> */}
     </section>
   );
 }

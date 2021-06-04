@@ -8,7 +8,10 @@ export default function blogPage({ posts, title, ...props }) {
   return (
     <Layout pageTitle={`${title} | Notes`} page="blog">
       <main>
-        <Container variant="mainContainer">
+        <Container
+          variant="mainContainer"
+          sx={{ paddingTop: 4, paddingBottom: 3 }}
+        >
           <Grid posts={posts} />
         </Container>
       </main>

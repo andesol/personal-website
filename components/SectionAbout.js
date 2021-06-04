@@ -35,6 +35,7 @@ export default function SectionAbout() {
             marginTop: 5,
             marginLeft: [1, 3, 5],
             display: "flex",
+            flexWrap: "wrap",
             justifyContent: "center",
             alignItems: "center",
           }}
@@ -49,7 +50,15 @@ export default function SectionAbout() {
             place through software! (Or making me massively rich, whatever
             works)
           </Text>
-          <Link variant="contact" href="mailto:andesol@protonmail.com">
+          <Link
+            variant="contact"
+            href="mailto:andesol@protonmail.com"
+            sx={{
+              marginTop: 3,
+              display: "inline-flex",
+              alignItems: "center",
+            }}
+          >
             Contact
             <IconMail sx={{ height: 16 }} />
           </Link>

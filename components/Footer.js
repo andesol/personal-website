@@ -15,10 +15,16 @@ function Footer() {
         padding: 4,
       }}
     >
-      <Flex sx={{ alignItems: "center", margin: "auto" }}>
+      <Flex
+        sx={{
+          alignItems: "center",
+          margin: "auto",
+          flexDirection: ["column", "row", "row"],
+        }}
+      >
         <span>&copy; {CURRENT_YEAR} andesol 🌿</span>
         <nav sx={{ color: "black" }}>
-          <Flex>
+          <Flex as="ul">
             <li>
               <RouteLink variant="underlined" href="/now">
                 Now
@@ -39,39 +45,8 @@ function Footer() {
                 position: "relative",
               }}
             >
-              <Link
-                sx={{
-                  "&:hover": {
-                    span: {
-                      visibility: "visible",
-                      display: "inline-block",
-                    },
-                  },
-                }}
-                variant="underlined"
-                href="mailto:andesol@protonmail.com"
-              >
+              <Link variant="underlined" href="mailto:andesol@protonmail.com">
                 Contact
-                <span
-                  sx={{
-                    visibility: "hidden",
-                    width: "120px",
-                    backgroundColor: "background",
-                    color: "text",
-                    textAlign: "center",
-                    padding: 2,
-                    borderRadius: "6px",
-                    width: "220px",
-                    bottom: "0",
-                    left: "105%",
-                    position: "absolute",
-                    zIndex: 1,
-                    boxShadow: "post",
-                  }}
-                >
-                  Wow! Somebody got here. I don't have a contact form, but click
-                  and send an email!
-                </span>
               </Link>
             </li>
           </Flex>
