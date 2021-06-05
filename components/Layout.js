@@ -14,7 +14,7 @@ function Layout({ children, pageTitle, page }) {
   return (
     <>
       <Seo pageTitle={pageTitle} />
-      <Header title="andesol" page={page} />
+      <Header title={"andesol" | page} page={page} />
       {children}
       <Footer />
     </>

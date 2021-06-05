@@ -3,7 +3,7 @@
 import { Heading, Link, jsx, Container } from "theme-ui";
 import Layout from "@components/Layout";
 
-export default function contactPage({ title }) {
+export default function nowPage({ title }) {
   return (
     <Layout pageTitle={title} page="now">
       <main>
@@ -55,7 +55,7 @@ export default function contactPage({ title }) {
             </Heading>
             <p>
               <em>Cinco horas con Mario</em>, by Miguel Delibes. A long
-              monologue describing the Spain of the 50-60.
+              monologue describing the Spain of the 50-60s.
             </p>
           </p>
         </Container>

@@ -15,7 +15,6 @@ export {
 };
 
 function Logo(props) {
-  console.log("logo", props);
   return (
     <svg
       {...props}

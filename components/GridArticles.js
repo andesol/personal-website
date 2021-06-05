@@ -5,8 +5,6 @@ import { Grid, Card } from "theme-ui";
 import PostCard from "components/PostCard";
 
 export default function mainGrid({ posts }) {
-  console.log(posts);
-
   if (posts === "undefined") return null;
 
   return (

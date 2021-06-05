@@ -13,6 +13,7 @@ function Header({ page }) {
 
   const { handleMenu } = useHamburgerMenu(ref);
 
+  // TODO: generalise
   let pageDependentNavItem = {
     home: {
       label: "Articles",
@@ -26,7 +27,14 @@ function Header({ page }) {
       label: "Index",
       url: "/blog",
     },
+    now: {
+      label: "Home",
+      url: "/",
+    },
   };
+
+  const pageDependentLabel = pageDependentNavItem[page].label;
+  const pageDependentUrl = pageDependentNavItem[page].url;
 
   return (
     <header
@@ -79,8 +87,8 @@ function Header({ page }) {
           }}
           ref={ref}
         >
-          <RouteLink variant="nav" href={pageDependentNavItem[page].url}>
-            {pageDependentNavItem[page].label}
+          <RouteLink variant="nav" href={pageDependentUrl || "/"}>
+            {pageDependentLabel || "Home"}
           </RouteLink>
 
           <Link
