@@ -26,7 +26,7 @@ To push the footer to the bottom of the page (without making it stiky or anythin
 ```css
 body {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 footer {
@@ -34,7 +34,7 @@ footer {
 }
 ```
 
-If for some reason you cannot use `vh` units, this also works:
+If for [some reason](https://chanind.github.io/javascript/2019/09/28/avoid-100vh-on-mobile-web.html) you cannot use `vh` units, this also works:
 
 ```css
 html {
@@ -43,6 +43,6 @@ html {
 
 body {
   display: flex;
-  height: 100%;
+  min-height: 100%;
 }
 ```

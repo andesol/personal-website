@@ -1,7 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-
-import { jsx, Box } from "theme-ui";
+import { jsx } from "theme-ui";
 import Image from "next/image";
 
 export default function Avatar() {
@@ -22,7 +21,7 @@ export default function Avatar() {
         alt="Picture of the author"
         layout="fill"
         objectFit="cover"
-        loading="eager"
+        priority="true"
       />
     </div>
   );

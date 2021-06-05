@@ -12,13 +12,10 @@ function Hero() {
         flexDirection: "column",
         color: "fakeBlack",
         minHeight: ["650px", "550px", "450px"],
-        position: "relative",
         backgroundColor: "gray",
         padding: "2rem",
-        zIndex: 2,
       }}
     >
-      {/* <Container sx={{ border: "1px solid red" }} variant="mainContainer"> */}
       <Flex
         sx={{
           flexWrap: "wrap",
@@ -48,7 +45,16 @@ function Hero() {
               paddingTop: 3,
             }}
           >
-            I collect here some of my notes on web development
+            I collect here some of my notes on{" "}
+            <span
+              sx={{
+                textDecoration: "underline",
+                textDecorationColor: "accent",
+                textDecorationThickness: "0.2em",
+              }}
+            >
+              web development
+            </span>
           </Text>
         </Flex>
         <Flex

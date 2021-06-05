@@ -17,17 +17,18 @@ export default function SectionAbout() {
           About
         </Heading>
         <Text
+          as="p"
           variant="body"
           sx={{
             paddingTop: 4,
           }}
         >
-          I started to learn web development with a craftsman mindset: I liked
-          the idea of creating your own space in the internet. Warning for
-          begginers: be careful. The first Udemy course is almost free, but you
-          may end up trapped in the Javascript swamp. Apart from that, I have an
-          engineering background which got me two things: a diploma stored in a
-          drawer, and ambivalent relation with Matlab.
+          I started with web development because I wanted to be a craftman. I
+          liked the idea of creating your own space in the internet. The first
+          Udemy course was almost free, but it was a trap: I ended up trapped in
+          the Javascript swamp. Apart from that, I have an engineering
+          background which got me two things: a diploma stored in a drawer, and
+          some nightmares written in Matlab.
         </Text>
         <Card
           variant="contact"
@@ -46,7 +47,7 @@ export default function SectionAbout() {
               width: "75%",
             }}
           >
-            I’m open for collaborations. Hit me up for making the world a better
+            I’m open to collaborations. Hit me up for making the world a better
             place through software! (Or making me massively rich, whatever
             works)
           </Text>

@@ -4,11 +4,8 @@ import { Container, Flex, jsx } from "theme-ui";
 
 import matter from "gray-matter";
 
-import RouterLink from "@components/RouteLink";
 import Layout from "@components/Layout";
 import Hero from "@components/Hero";
-import { IconArrow } from "@components/icons";
-import Grid from "@components/GridArticles";
 import SectionArticles from "@components/SectionArticles";
 import SectionAbout from "@components/SectionAbout";
 

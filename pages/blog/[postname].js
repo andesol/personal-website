@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import React from "react";
-import { jsx } from "theme-ui";
+import { Heading, jsx } from "theme-ui";
 import RouteLink from "@components/RouteLink";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
@@ -21,13 +21,15 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
           variant="postContainer"
         >
           <article sx={{ fontSize: 3 }}>
-            <h1
+            <Heading
+              as="h1"
               sx={{
                 fontSize: 7,
+                marginBottom: 5,
               }}
             >
               {frontmatter.title}
-            </h1>
+            </Heading>
             <div>
               <ReactMarkdown source={markdownBody} />
             </div>

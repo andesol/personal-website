@@ -13,6 +13,7 @@ export default {
     accent: "#FFE37E",
     muted: "dimgray",
     gray: "#F7F7F7",
+    darkgray: "#4e4e4e",
   },
   fonts: {
     body:
@@ -75,6 +76,9 @@ export default {
       fontWeight: "body",
       lineHeight: "body",
     },
+    div: {
+      color: "red",
+    },
   },
   // variants for built-in components
   buttons: {},
@@ -126,13 +130,15 @@ export default {
       fontSize: 5,
       textAlign: "center",
       padding: 3,
+      color: "darkgray",
     },
     serif: {
       fontFamily: "heading",
+      fontSize: 3,
     },
     body: {
       margin: "0 auto",
-      maxWidth: "50ch",
+      maxWidth: "55ch",
       fontFamily: "body",
       fontWeight: "body",
       fontSize: 3,
@@ -166,14 +172,24 @@ export default {
       fontFamily: "heading",
       left: "0px",
       color: "dimgray",
-      paddingRight: 3,
-      ":hover": {
-        transform: "translateY(-1.5px)",
-        transition: "ease 0.5s",
-        color: "accent",
+      marginRight: 3,
+      "::after": {
+        content: "''",
+        position: "absolute",
+        bottom: "0",
+        left: "0",
+        width: "100%",
+        height: "3px",
+        backgroundColor: "orange",
+        transition: "transform 300ms",
+        transform: "scale(0)",
+        transformOrigin: "center",
       },
-      ":active": {
-        color: "accent",
+      ":hover": {
+        color: "black",
+        "::after": {
+          transform: "scale(1)",
+        },
       },
     },
     underlined: {
@@ -184,8 +200,8 @@ export default {
       padding: 1,
     },
     button: {
-      paddingTop: 3,
-      paddingBottom: 3,
+      paddingTop: 2,
+      paddingBottom: 2,
       paddingLeft: 4,
       paddingRight: 4,
       fontFamily: "heading",

@@ -9,26 +9,31 @@ import RouteLink from "@components/RouteLink";
 import useHamburgerMenu from "../hooks/useHamburgerMenu";
 
 function Header({ page }) {
-  let headerTheme = {};
-
   const ref = useRef();
 
   const { handleMenu } = useHamburgerMenu(ref);
 
   let pageDependentNavItem = {
-    home: "Articles",
-    blog: "Home",
-    article: "Index",
+    home: {
+      label: "Articles",
+      url: "/blog",
+    },
+    blog: {
+      label: "Home",
+      url: "/",
+    },
+    article: {
+      label: "Index",
+      url: "/blog",
+    },
   };
 
   return (
     <header
       sx={{
-        width: "100%",
-        backgroundColor: headerTheme.background,
+        height: "100%",
         paddingTop: 3,
         paddingBottom: 3,
-        color: "fakeBlack",
       }}
     >
       <Container
@@ -74,15 +79,15 @@ function Header({ page }) {
           }}
           ref={ref}
         >
-          <RouteLink variant="nav" href="/blog">
-            {pageDependentNavItem[page]}
+          <RouteLink variant="nav" href={pageDependentNavItem[page].url}>
+            {pageDependentNavItem[page].label}
           </RouteLink>
 
           <Link
-            variant="nav"
             href="https://github.com/andesol"
             target="_blank"
             rel="noopener noreferer"
+            variant="nav"
           >
             Github
           </Link>

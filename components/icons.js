@@ -21,7 +21,7 @@ function Logo(props) {
       {...props}
       aria-label="logo"
       width="88"
-      height="20"
+      height="19"
       viewBox="0 0 88 20"
       xmlns="http://www.w3.org/2000/svg"
       title="logo"
