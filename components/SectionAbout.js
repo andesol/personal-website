@@ -23,12 +23,11 @@ export default function SectionAbout() {
             paddingTop: 4,
           }}
         >
-          I started with web development because I wanted to be a craftman. I
-          liked the idea of creating your own space in the internet. The first
-          Udemy course was almost free, but it was a trap: I ended up trapped in
-          the Javascript swamp. Apart from that, I have an engineering
-          background which got me two things: a diploma stored in a drawer, and
-          some nightmares written in Matlab.
+          I started to learn web technologies because I wanted to be a craftman,
+          but without getting my hands dirty. I liked the idea of creating your
+          own space in the internet. The first Udemy course was almost free, but
+          it was a trap: I ended up lost in the Javascript ecosystem/desert.
+          From that day I keep wandering among frameworks and quirky details.
         </Text>
         <Card
           variant="contact"
@@ -47,7 +46,7 @@ export default function SectionAbout() {
               width: "75%",
             }}
           >
-            I’m open to collaborations. Hit me up for making the world a better
+            I’m open for collaborations. Hit me up for making the world a better
             place through software! (Or making me massively rich, whatever
             works)
           </Text>

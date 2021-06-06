@@ -1,6 +1,7 @@
 import { ThemeProvider } from "theme-ui";
 import theme from "../styles/theme";
 import "../styles/global.css";
+import "../styles/articles.css";
 import "prismjs/themes/prism-tomorrow.css";
 
 function App({ Component, pageProps }) {

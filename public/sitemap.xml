@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://andesol.xyz</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-06-05T23:04:24.816Z</lastmod></url>
-<url><loc>https://andesol.xyz/blog</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-06-05T23:04:24.817Z</lastmod></url>
-<url><loc>https://andesol.xyz/now</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-06-05T23:04:24.817Z</lastmod></url>
-<url><loc>https://andesol.xyz/blog/pushing-the-footer</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-06-05T23:04:24.817Z</lastmod></url>
-<url><loc>https://andesol.xyz/blog/responsive-grid</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-06-05T23:04:24.817Z</lastmod></url>
-<url><loc>https://andesol.xyz/blog/throttle-vs-debounce</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-06-05T23:04:24.817Z</lastmod></url>
-<url><loc>https://andesol.xyz/blog/use-reducer</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-06-05T23:04:24.817Z</lastmod></url>
+<url><loc>https://andesol.xyz</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-06-06T23:04:42.462Z</lastmod></url>
+<url><loc>https://andesol.xyz/blog</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-06-06T23:04:42.462Z</lastmod></url>
+<url><loc>https://andesol.xyz/now</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-06-06T23:04:42.462Z</lastmod></url>
+<url><loc>https://andesol.xyz/blog/about-this-web</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-06-06T23:04:42.462Z</lastmod></url>
+<url><loc>https://andesol.xyz/blog/pushing-the-footer</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-06-06T23:04:42.462Z</lastmod></url>
+<url><loc>https://andesol.xyz/blog/responsive-grid</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-06-06T23:04:42.462Z</lastmod></url>
+<url><loc>https://andesol.xyz/blog/throttle-vs-debounce</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-06-06T23:04:42.462Z</lastmod></url>
+<url><loc>https://andesol.xyz/blog/use-reducer</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-06-06T23:04:42.462Z</lastmod></url>
 </urlset>

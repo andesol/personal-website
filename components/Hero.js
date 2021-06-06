@@ -30,9 +30,8 @@ function Hero() {
           sx={{
             flexDirection: "column",
             alignItems: ["center", "center", "flex-start"],
-            width: ["100%", "100%", "auto"],
+            width: ["100%", "100%", "65%"],
             order: [2, 2, 1],
-            textAlign: "center",
           }}
         >
           <Heading as="h1" variant="h1">
@@ -45,16 +44,27 @@ function Hero() {
               paddingTop: 3,
             }}
           >
-            I collect here some of my notes on{" "}
+            I share here some of my notes on{" "}
             <span
               sx={{
-                textDecoration: "underline",
-                textDecorationColor: "accent",
-                textDecorationThickness: "0.2em",
+                position: "relative",
+                zIndex: 0,
+                "::after": {
+                  content: "''",
+                  position: "absolute",
+                  top: 1,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  backgroundColor: "accent",
+                  zIndex: -1,
+                  transform: "rotate(-1deg)",
+                },
               }}
             >
               web development
             </span>
+            , to document things I might forget later.
           </Text>
         </Flex>
         <Flex

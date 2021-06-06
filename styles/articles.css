@@ -1,0 +1,28 @@
+/* Markdown articles minor tweaks */
+
+/* Override prismjs styles */
+article pre[class*="language-"] {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+article code {
+  background: rgb(228, 228, 228);
+  border-radius: 5px;
+}
+
+article img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+article p > a {
+  text-decoration: underline;
+}
+
+article li {
+  list-style: disc;
+  margin-left: 1.5rem;
+}

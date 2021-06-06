@@ -125,7 +125,7 @@ export default {
     },
     h2: {
       fontFamily: "heading",
-      fontWeight: "heading",
+      fontWeight: "body",
       lineHeight: "heading",
       fontSize: 5,
       textAlign: "center",
@@ -180,7 +180,7 @@ export default {
         left: "0",
         width: "100%",
         height: "3px",
-        backgroundColor: "orange",
+        backgroundColor: "accent",
         transition: "transform 300ms",
         transform: "scale(0)",
         transformOrigin: "center",
