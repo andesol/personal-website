@@ -16,10 +16,16 @@ export default function SectionArticles({ posts }) {
         zIndex: "1",
       }}
     >
-      <Heading as="h2" variant="h2">
-        Things I write
-      </Heading>
       <Container variant="gridContainer">
+        <Heading
+          as="h2"
+          variant="h2"
+          sx={{
+            textAlign: "center",
+          }}
+        >
+          Things I write
+        </Heading>
         <Grid
           columns={["1fr", "1fr 1fr", "1fr 1fr"]}
           sx={{

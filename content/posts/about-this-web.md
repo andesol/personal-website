@@ -37,11 +37,15 @@ I wasn't a fan of:
 
 I used [Theme UI](https://theme-ui.com/home/) as a CSS (CSS-in-JS) library.
 
+Good:
+
 ✅ The idea is great. You define properties (like colors, spacing, etc.) in a file (`theme.js`) and then you can apply them in your jsx elements.
+
+Not so good:
 
 🟨 Defining styles as a javascript object is confusing if you're not used to it.
 
-🟨 I haven't learn to think like a designer (creating design systems and all), so the development workflow got a bit messy. That's my problem, of course.
+🟨 I haven't learned to think like a designer (creating design systems and all), so the development workflow got a bit messy. That's my problem, of course.
 
 ## Content
 
@@ -53,4 +57,6 @@ Mdx was tempting, but I didn't want to overengineer stuff.
 
 Being this site static, we can leverage some services that emerged to make Jamstack easy.
 
-My first choice was Netlify, which I've already used for other experiments. Unfortunately, there seems to be an issue with the `next/image` component. The avatar image took several seconds to load. I [could've investigated](https://rhnmht30.dev/blog/next-image-with-netlify) further, but instead took the easy path: I deployed in Vercel. Which is almost as easy as Netlify, if not more.
+My first choice was Netlify, which I've already used for other experiments. Unfortunately, there seems to be an issue with the `next/image` component. The avatar image took several seconds to load. I [could've investigated](https://rhnmht30.dev/blog/next-image-with-netlify) further, but instead took the easy path: I deployed in Vercel, which is almost as easy as Netlify.
+
+I add a post, pushed to github and bam!, the web rebuilds itself and it's ready in a few seconds.

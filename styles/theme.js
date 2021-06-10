@@ -124,12 +124,13 @@ export default {
       fontSize: 6,
     },
     h2: {
+      width: "100%",
       fontFamily: "heading",
       fontWeight: "body",
       lineHeight: "heading",
       fontSize: 5,
-      textAlign: "center",
-      padding: 3,
+      paddingTop: 3,
+      paddingBottom: 3,
       color: "darkgray",
     },
     serif: {
@@ -137,11 +138,11 @@ export default {
       fontSize: 3,
     },
     body: {
-      margin: "0 auto",
-      maxWidth: "55ch",
+      width: "100%",
       fontFamily: "body",
       fontWeight: "body",
       fontSize: 3,
+      padding: 2,
     },
   },
   layout: {

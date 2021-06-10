@@ -1,6 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Box, Heading, Container, Flex, Text } from "theme-ui";
+import { jsx, Heading, Flex, Text } from "theme-ui";
 import Avatar from "components/Avatar";
 import { IconArrowDown } from "./icons";
 
@@ -19,7 +19,7 @@ function Hero() {
       <Flex
         sx={{
           flexWrap: "wrap",
-          maxWidth: "800px",
+          maxWidth: "785px",
           width: "100%",
           margin: "auto",
           alignItems: "center",
@@ -30,7 +30,7 @@ function Hero() {
           sx={{
             flexDirection: "column",
             alignItems: ["center", "center", "flex-start"],
-            width: ["100%", "100%", "65%"],
+            width: ["100%", "100%", "60%"],
             order: [2, 2, 1],
           }}
         >
@@ -44,7 +44,8 @@ function Hero() {
               paddingTop: 3,
             }}
           >
-            I share here some of my notes on{" "}
+            I'm a content creator that helps people to... {"\n"} Nah, I just
+            share some of my notes on{" "}
             <span
               sx={{
                 position: "relative",
@@ -64,7 +65,6 @@ function Hero() {
             >
               web development
             </span>
-            , to document things I might forget later.
           </Text>
         </Flex>
         <Flex

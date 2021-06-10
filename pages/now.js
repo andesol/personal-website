@@ -1,6 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { Heading, Link, jsx, Container } from "theme-ui";
+import { Heading, Link, jsx, Container, Text, Box } from "theme-ui";
 import Layout from "@components/Layout";
 
 export default function nowPage({ title }) {
@@ -13,7 +13,7 @@ export default function nowPage({ title }) {
           }}
           variant="postContainer"
         >
-          <p
+          <Box
             sx={{
               display: "grid",
               placeItems: "center",
@@ -25,13 +25,14 @@ export default function nowPage({ title }) {
             </Heading>
             <Heading
               as="h2"
+              variant="h2"
               sx={{
                 width: "100%",
               }}
             >
-              💻 Learning
+              💻 Doing
             </Heading>
-            <p>
+            <Text variant="body">
               I started with Angular a couple of month ago. I knew React but I
               wanted to get a different view on Javascript (or Typescript, for
               that matters) front end frameworks. I started an{" "}
@@ -44,20 +45,23 @@ export default function nowPage({ title }) {
               </Link>
               , combining Angular with Nest.js, a back end framework that
               follows similar conventions.
-            </p>
+            </Text>
             <Heading
               as="h2"
+              variant="h2"
               sx={{
-                width: "100%",
+                marginTop: "4",
               }}
             >
-              📕 Reading
+              📕 Learning
             </Heading>
-            <p>
-              <em>Cinco horas con Mario</em>, by Miguel Delibes. A long
-              monologue describing the Spain of the 50-60s.
-            </p>
-          </p>
+
+            <Text as="p" variant="body">
+              <strong>SQL</strong>. I have used some no-SQL databases and they
+              did the trick, but I couldn't spend one more day without knowing
+              the foundamentals.
+            </Text>
+          </Box>
         </Container>
       </main>
     </Layout>
