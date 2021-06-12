@@ -54,7 +54,7 @@ export default function SectionArticles({ posts }) {
             marginTop: 4,
           }}
         >
-          Browse notes
+          Browse
         </RouterLink>
       </div>
     </div>

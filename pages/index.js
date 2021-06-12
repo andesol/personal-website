@@ -1,6 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { Container, Flex, jsx } from "theme-ui";
+import { jsx } from "theme-ui";
 
 import matter from "gray-matter";
 
@@ -43,9 +43,17 @@ export async function getStaticProps() {
     return data;
   })(require.context("../content/posts", true, /\.md$/));
 
+  const sortedPosts = posts.sort((a, b) => {
+    if (b.frontmatter.date > a.frontmatter.date) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
+
   return {
     props: {
-      posts,
+      posts: sortedPosts,
       title: configData.default.title,
       description: configData.default.description,
     },
