@@ -7,6 +7,10 @@ article pre[class*="language-"] {
   font-size: 14px;
 }
 
+article h2 {
+  margin-top: 1.75em;
+}
+
 article code {
   background: rgb(228, 228, 228);
   border-radius: 5px;
