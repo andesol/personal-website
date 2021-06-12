@@ -48,7 +48,6 @@ function Header({ page }) {
         variant="mainContainer"
         sx={{
           flexDirection: ["column", "column", "row"],
-          overflow: "hidden",
           display: "flex",
           justifyContent: "space-between",
         }}
