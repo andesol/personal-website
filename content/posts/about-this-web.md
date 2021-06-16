@@ -45,7 +45,7 @@ Not so good:
 
 🟨 Defining styles as a javascript object is confusing if you're not used to it.
 
-🟨 I haven't learned to think like a designer (creating design systems and all), so the development workflow got a bit messy. That's my problem, of course.
+🟨 If you don't think like a designer (having a systematic approach to styling) it's difficult to make the most out of it. My development workflow got a bit messy. That's my problem, of course.
 
 ## Content
 

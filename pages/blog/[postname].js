@@ -40,12 +40,13 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
               placeItems: "center",
               marginTop: 2,
               marginBottom: 2,
+              padding: "2rem",
             }}
           >
             <hr
               sx={{
                 margin: "2rem auto",
-                width: "70%",
+                width: "50%",
                 borderTop: "1px solid rgba(0, 0, 0, 0.1)",
                 borderBottom: "1px solid rgba(255, 255, 255, 0.3)",
               }}

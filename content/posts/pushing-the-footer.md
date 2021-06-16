@@ -21,7 +21,7 @@ But there's few content and you end up with something like:
 
 ![floating footer](/post-img/float-footer.png)
 
-To push the footer to the bottom of the page (without making it stiky or anything) you can do:
+To push the footer to the bottom of the page (without making it sticky or anything) you can do:
 
 ```css
 body {

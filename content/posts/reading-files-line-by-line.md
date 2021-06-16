@@ -42,6 +42,6 @@ fs.readFile("./file.txt", "utf8", (err, data) => {
    * \r for carriage return (optional)
    * \n for new line
    */
-  const array = data.split(/\r?\s/);
+  const array = data.split(/\r?\n/);
 });
 ```
