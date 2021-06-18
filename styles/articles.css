@@ -24,6 +24,14 @@ article img {
 
 article p > a {
   text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: grey;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+article p > a:hover {
+  text-decoration-color: black;
 }
 
 article li {

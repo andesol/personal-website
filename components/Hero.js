@@ -19,7 +19,7 @@ function Hero() {
       <Flex
         sx={{
           flexWrap: "wrap",
-          maxWidth: "785px",
+          maxWidth: "760px",
           width: "100%",
           margin: "auto",
           alignItems: "center",
@@ -45,7 +45,7 @@ function Hero() {
             }}
           >
             I'm a content creator that helps people to... {"\n"} Nah, I just
-            share some of my notes on{" "}
+            share some thoughts and snippets on{" "}
             <span
               sx={{
                 position: "relative",
