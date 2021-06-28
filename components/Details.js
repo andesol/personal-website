@@ -17,12 +17,12 @@ export default function Details() {
           <RouteLink variant="underlined" href="/contact">
             Talk to me
           </RouteLink>
-          . <br />
+          <br />
           See what I'm doing{" "}
           <RouteLink variant="underlined" href="/now">
             now
           </RouteLink>
-          .<br /> Or take a look at what's below.{" "}
+          <br /> Or take a look at what's below.{" "}
         </p>
       </div>
     </Card>

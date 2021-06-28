@@ -34,7 +34,7 @@ function Hero() {
             order: [2, 2, 1],
           }}
         >
-          <Heading as="h1" variant="h1">
+          <Heading as="h1" variant="h1" sx={{ textAlign: "center" }}>
             Hello, I'm Andreu!
           </Heading>
           <Text

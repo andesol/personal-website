@@ -1,6 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { useRef } from "react";
+import { useState, useRef, useLayoutEffect } from "react";
 import { jsx, Flex, MenuButton, Link, Container } from "theme-ui";
 
 import { Logo } from "@components/icons";
@@ -10,6 +10,15 @@ import useHamburgerMenu from "../hooks/useHamburgerMenu";
 
 function Header({ page }) {
   const ref = useRef();
+
+  // const [windowWidth, setWindowWidth] = useState();
+
+  // useLayoutEffect(() => {
+  //   setWindowWidth(window.innerWidth);
+  //   window.addEventListener("resize", () => {
+  //     setWindowWidth(window.innerWidth);
+  //   });
+  // }, []);
 
   const { handleMenu } = useHamburgerMenu(ref);
 
@@ -55,6 +64,7 @@ function Header({ page }) {
         <Flex
           sx={{
             justifyContent: "space-between",
+            alignItems: "center",
             width: ["100%", "100%", "auto"],
           }}
         >
@@ -63,7 +73,7 @@ function Header({ page }) {
               alignItems: "center",
             }}
           >
-            <RouteLink href="/" aria-label="andesol home" aria>
+            <RouteLink href="/" aria-label="andesol home">
               <Logo
                 sx={{
                   display: "inline-block",
@@ -72,17 +82,28 @@ function Header({ page }) {
               />
             </RouteLink>
           </Flex>
+
           <MenuButton
             sx={{
               display: ["block", "block", "none"],
+              width: "35px",
+              height: "35px",
+              "&>svg": {
+                width: "35px",
+                height: "35px",
+              },
             }}
             onClick={handleMenu}
           />
         </Flex>
+
         <Flex
           as="nav"
           sx={{
             flexDirection: ["column", "column", "row"],
+            "&>*": {
+              padding: [2, 2, 0],
+            },
           }}
           ref={ref}
         >
